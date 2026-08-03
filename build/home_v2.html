@@ -184,10 +184,9 @@
   .hs-nav{position:relative;z-index:1;display:flex;justify-content:center;gap:10px;margin-top:20px;}
   .hs-nav button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:var(--line-strong);cursor:pointer;transition:width .4s cubic-bezier(.22,.61,.36,1),background .3s ease;}
   .hs-nav button.on{width:30px;border-radius:5px;background:linear-gradient(90deg,var(--brand),var(--violet));}
-  /* full-width product showcase section (below hero) */
-  .prod-showcase{position:relative;padding:34px 0 62px;background:var(--bg);}
-  .prod-showcase .section-head{margin-bottom:32px;}
-  .prod-showcase .hero-show{max-width:1040px;margin:0 auto;}
+  /* product showcase section (below hero) — clean & compact */
+  .prod-showcase{position:relative;padding:8px 0 54px;background:var(--bg);}
+  .prod-showcase .hero-show{max-width:800px;margin:0 auto;}
 
   /* ===== CLIENTS ===== */
   .clients-sec{padding:44px 0 48px;border-bottom:1px solid var(--line);background:var(--bg);}
@@ -643,8 +642,7 @@
   <!-- ===== PRODUCT SHOWCASE ===== -->
   <section class="prod-showcase">
     <div class="wrap">
-      <div class="section-head reveal"><span class="eyebrow">Our AI Products</span><h2>Production-Ready AI, Built for Real-World Business</h2><p>Four products already live and working — swipe through them.</p></div>
-      <div class="hero-show" id="heroShow">
+      <div class="hero-show reveal" id="heroShow">
         <div class="hs-track" id="hsTrack">
           <a class="hs-slide" href="https://claude.ai/code/artifact/0c1b47ba-5c67-4ab8-aafa-a2d5aa275f3d" draggable="false"><img src="data:image/jpeg;base64,__HEROLOGI__" alt="Cargora — AI Operations Copilot for Logistics" draggable="false"></a>
           <a class="hs-slide" href="https://trackcontainer.in/" target="_blank" rel="noopener" draggable="false"><img src="data:image/jpeg;base64,__HEROTRACK__" alt="TrackContainer — Real-time container tracking" draggable="false"></a>

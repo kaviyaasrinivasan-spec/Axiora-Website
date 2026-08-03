@@ -130,7 +130,7 @@ Theme Name: Axiora Labs
 Theme URI: https://axioralabs.ai
 Author: Axiora Labs
 Description: Custom enterprise theme for Axiora Labs — AI automation. Built to match the approved design.
-Version: 1.2.0
+Version: 1.2.1
 */
 `);
 
@@ -138,7 +138,7 @@ Version: 1.2.0
 wr("functions.php",`<?php
 if(!defined('ABSPATH'))exit;
 function wb_assets(){
-  $u=get_template_directory_uri(); $v='1.2.0';
+  $u=get_template_directory_uri(); $v='1.2.1';
   if(is_page_template('template-audit.php')){
     wp_enqueue_style('wb-audit',$u.'/assets/css/audit.css',array(),$v);
     return;

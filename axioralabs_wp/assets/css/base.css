@@ -183,10 +183,9 @@
   .hs-nav{position:relative;z-index:1;display:flex;justify-content:center;gap:10px;margin-top:20px;}
   .hs-nav button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:var(--line-strong);cursor:pointer;transition:width .4s cubic-bezier(.22,.61,.36,1),background .3s ease;}
   .hs-nav button.on{width:30px;border-radius:5px;background:linear-gradient(90deg,var(--brand),var(--violet));}
-  /* full-width product showcase section (below hero) */
-  .prod-showcase{position:relative;padding:34px 0 62px;background:var(--bg);}
-  .prod-showcase .section-head{margin-bottom:32px;}
-  .prod-showcase .hero-show{max-width:1040px;margin:0 auto;}
+  /* product showcase section (below hero) — clean & compact */
+  .prod-showcase{position:relative;padding:8px 0 54px;background:var(--bg);}
+  .prod-showcase .hero-show{max-width:800px;margin:0 auto;}
 
   /* ===== CLIENTS ===== */
   .clients-sec{padding:44px 0 48px;border-bottom:1px solid var(--line);background:var(--bg);}
