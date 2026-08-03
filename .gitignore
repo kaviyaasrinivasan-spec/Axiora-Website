@@ -1,0 +1,8 @@
+# Original React source site (large, not part of the WordPress deliverable)
+source/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+node_modules/

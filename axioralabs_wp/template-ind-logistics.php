@@ -1,0 +1,120 @@
+<?php /* Template Name: Axiora — Logistics & Supply Chain */ get_header(); ?>
+<main id="top">
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="wrap ind-hero">
+      <div class="copy reveal">
+        <span class="eyebrow">Industries · Logistics &amp; Supply Chain</span>
+        <h1>Automate Your Logistics &amp; Supply Chain <span class="grad">with AI</span></h1>
+        <p class="sub">Move more freight, clear customs faster, and eliminate manual back-office work — with AI that plugs into your existing ERP, TMS, WMS and freight systems.</p>
+        <div class="hcta">
+          <a class="btn btn-primary" href="/contact/">Book a Free AI Audit <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="/cargora/">Explore Cargora</a>
+        </div>
+      </div>
+      <div class="viswrap reveal">
+        <div class="float-chip one"><span class="fc-ic" style="background:linear-gradient(135deg,#10b981,#34d399)"><svg class="icon"><use href="#i-clock"/></svg></span><span><b>40%</b><span>Faster TAT</span></span></div>
+        <div class="float-chip two"><span class="fc-ic" style="background:linear-gradient(135deg,#3c59e7,#6b7cef)"><svg class="icon"><use href="#i-check"/></svg></span><span><b>Zero</b><span>Manual entry</span></span></div>
+        <div class="ops-panel">
+          <div class="ops-top"><span class="dots"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></span><span class="vt"><svg class="icon"><use href="#i-rocket"/></svg> Cargora · Live Operations</span></div>
+          <div class="ops-body">
+            <div class="ship-row"><span class="ship-ico"><svg class="icon"><use href="#i-truck"/></svg></span><span class="ship-txt"><b>INV-4821 · FTL</b><span>Chennai → Mumbai</span></span><span class="pill transit">In Transit</span></div>
+            <div class="ship-row"><span class="ship-ico" style="background:linear-gradient(135deg,#a855f7,#7c3aed)"><svg class="icon"><use href="#i-shield"/></svg></span><span class="ship-txt"><b>BL-2290 · Ocean</b><span>Customs entry filed</span></span><span class="pill cleared">Cleared</span></div>
+            <div class="ship-row"><span class="ship-ico" style="background:linear-gradient(135deg,#f97316,#ea580c)"><svg class="icon"><use href="#i-file"/></svg></span><span class="ship-txt"><b>POD-1174</b><span>Data auto-extracted → ERP</span></span><span class="pill auto">Automated</span></div>
+            <div class="ship-row"><span class="ship-ico" style="background:linear-gradient(135deg,#0ea5e9,#3c59e7)"><svg class="icon"><use href="#i-compass"/></svg></span><span class="ship-txt"><b>CON-7788 · Air</b><span>Out for delivery</span></span><span class="pill delivered">Arriving</span></div>
+            <div class="ops-bar"><span></span></div>
+            <div class="ops-cap">78% of today's shipments processed automatically</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNDERSTANDING -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The industry</span><h2>What Logistics &amp; Supply Chain Runs On</h2><p>A high-volume, document-heavy, deadline-driven world — moving and storing goods across every mode.</p></div>
+      <div class="seg-grid">
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-truck"/></svg></span><b>Full Truck Load (FTL)</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-layers"/></svg></span><b>Less-than-Truck Load (LTL)</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-globe"/></svg></span><b>Freight Forwarding</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-plane"/></svg></span><b>Air Freight</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-ship"/></svg></span><b>Ocean Freight</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-shield"/></svg></span><b>Customs Brokerage</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-warehouse"/></svg></span><b>Warehousing &amp; Inventory</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-compass"/></svg></span><b>Container Tracking</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-rocket"/></svg></span><b>Last-mile &amp; 3PL</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTLENECKS -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The problem</span><h2>Where Teams Lose Hours Every Day</h2><p>The repetitive, manual work that slows down operations and creates errors.</p></div>
+      <div class="pain-grid">
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-file"/></svg></span><p>Typing data from <b>invoices, PODs &amp; packing lists</b> into ERP/TMS by hand.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-shield"/></svg></span><p>Slow <b>customs documentation</b> and filing that delays shipments.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-compass"/></svg></span><p>Chasing <b>shipment &amp; container status</b> across multiple carrier portals.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-mail"/></svg></span><p>Repetitive <b>client status-update emails</b> and follow-ups.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-dollar"/></svg></span><p><b>Billing reconciliation</b> errors, mismatches and disputes.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-database"/></svg></span><p><b>Disconnected systems</b> — ERP, TMS, WMS &amp; customs don't talk to each other.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE AUTOMATE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">How it works</span><h2>How Axiora Labs Automates It</h2><p>From raw documents to fully automated operations — no manual typing in between.</p></div>
+      <div class="flow reveal">
+        <div class="flow-step" style="--c1:#3c59e7;--c2:#22d3ee"><span class="flow-ico"><svg class="icon"><use href="#i-file"/></svg></span><b>Documents In</b><span>Invoices · PODs · BOLs</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#a855f7;--c2:#ec4899"><span class="flow-ico"><svg class="icon"><use href="#i-bot"/></svg></span><b>AI Extract</b><span>Reads &amp; captures data</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#f97316;--c2:#ef4444"><span class="flow-ico"><svg class="icon"><use href="#i-shield"/></svg></span><b>Validate</b><span>Checks &amp; flags errors</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#10b981;--c2:#34d399"><span class="flow-ico"><svg class="icon"><use href="#i-database"/></svg></span><b>Sync to ERP/TMS/WMS</b><span>Zero manual entry</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#6366f1;--c2:#8b5cf6"><span class="flow-ico"><svg class="icon"><use href="#i-zap"/></svg></span><b>Automated Ops</b><span>Tracking · billing · alerts</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Our products</span><h2>The AI Platforms Powering Logistics</h2><p>Purpose-built products already running in real logistics operations.</p></div>
+      <div class="prod-grid">
+        <div class="prod-card reveal" style="--c1:#3c59e7;--c2:#1a4bc5"><span class="prod-ico"><svg class="icon"><use href="#i-rocket"/></svg></span><h3>Cargora</h3><p>The AI operations copilot — works with your ERP, TMS &amp; WMS to automate repetitive operations and assist your team.</p><a class="prod-link" href="/cargora/">Explore platform <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        <div class="prod-card reveal" style="--c1:#a855f7;--c2:#7c3aed"><span class="prod-ico"><svg class="icon"><use href="#i-layers"/></svg></span><h3>CustomsFlow AI</h3><p>AI customs clearance &amp; workflow automation connecting brokers, ops teams and customers in one system.</p><a class="prod-link" href="https://beta.customsflowai.in" target="_blank" rel="noopener">Visit CustomsFlow AI <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        <div class="prod-card reveal" style="--c1:#f97316;--c2:#ea580c"><span class="prod-ico"><svg class="icon"><use href="#i-flow"/></svg></span><h3>BoostEntry AI</h3><p>Extracts data from image/PDF invoices &amp; PODs, validates it, and updates your ERP — proven at <b>KSS Roadways</b>.</p><a class="prod-link" href="https://boostentryai.com/" target="_blank" rel="noopener">Visit BoostEntry AI <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        <div class="prod-card reveal" style="--c1:#10b981;--c2:#059669"><span class="prod-ico"><svg class="icon"><use href="#i-truck"/></svg></span><h3>TrackContainer</h3><p>Automated container movement tracking &amp; live operational visibility — built for <b>4S Logistics</b>.</p><a class="prod-link" href="https://trackcontainer.in/" target="_blank" rel="noopener">Visit TrackContainer <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The impact</span><h2>What Changes for Your Operation</h2><p>Real, measurable improvements once the manual work is automated.</p></div>
+      <div class="imp-row">
+        <div class="imp-card reveal"><div class="imp-ico"><svg class="icon"><use href="#i-clock"/></svg></div><div class="imp-num"><span data-count="40">0</span>%</div><div class="lbl">Faster turnaround (TAT)</div></div>
+        <div class="imp-card reveal"><div class="imp-ico"><svg class="icon"><use href="#i-activity"/></svg></div><div class="imp-num"><span data-count="50">0</span>%</div><div class="lbl">Higher productivity</div></div>
+        <div class="imp-card reveal"><div class="imp-ico"><svg class="icon"><use href="#i-dollar"/></svg></div><div class="imp-num"><span data-count="30">0</span>%</div><div class="lbl">Lower operational cost</div></div>
+        <div class="imp-card reveal"><div class="imp-ico"><svg class="icon"><use href="#i-check"/></svg></div><div class="imp-num"><span data-count="98">0</span><span class="suf">%+</span></div><div class="lbl">Processing accuracy</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap cta-inner reveal">
+      <h2>Ready to Automate Your Logistics Operation?</h2>
+      <p>Book a free AI Automation Audit and we'll map exactly where AI can cut manual work, speed up your turnaround, and reduce costs.</p>
+      <div class="cta-btns"><a class="btn btn-white" href="/contact/">Book a Free AI Audit <svg class="icon"><use href="#i-arrow"/></svg></a><a class="btn btn-white-ghost" href="/cargora/">See Cargora</a></div>
+    </div>
+  </section>
+</main>
+
+<?php get_footer(); ?>

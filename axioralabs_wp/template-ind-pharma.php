@@ -1,0 +1,147 @@
+<?php /* Template Name: Axiora — Pharma & Life Sciences */ get_header(); ?>
+<main id="top">
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="wrap ind-hero">
+      <div class="copy reveal">
+        <span class="eyebrow">Industries · Pharma &amp; Life Sciences</span>
+        <h1>AI for Pharma, Biotech &amp; <span class="grad">Clinical Research</span></h1>
+        <p class="sub">From clinical trial design to safety reporting, automate the documentation-heavy, compliance-critical work of drug development — powered by <b>iClinicalAI</b>, our production-ready clinical research platform.</p>
+        <div class="hcta">
+          <a class="btn btn-primary" href="https://iclinical.ai/" target="_blank" rel="noopener">Explore iClinicalAI <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="/contact/">Book a Consultation</a>
+        </div>
+      </div>
+      <div class="viswrap reveal">
+        <div class="float-chip one"><span class="fc-ic" style="background:linear-gradient(135deg,#10b981,#34d399)"><svg class="icon"><use href="#i-check"/></svg></span><span><b>Live</b><span>Production platform</span></span></div>
+        <div class="float-chip two"><span class="fc-ic" style="background:linear-gradient(135deg,#a855f7,#7c3aed)"><svg class="icon"><use href="#i-shield"/></svg></span><span><b>Audit</b><span>-ready outputs</span></span></div>
+        <div class="app-win">
+          <div class="app-top"><span class="dots"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></span><span class="vt"><svg class="icon"><use href="#i-spark"/></svg> iClinicalAI · Clinical Research Copilot</span></div>
+          <div class="app-body">
+            <div class="app-side">
+              <div class="si"><svg class="icon"><use href="#i-search"/></svg> FIND</div>
+              <div class="si active"><svg class="icon"><use href="#i-file"/></svg> DESIGN</div>
+              <div class="si"><svg class="icon"><use href="#i-database"/></svg> MANAGE</div>
+              <div class="si"><svg class="icon"><use href="#i-linechart"/></svg> ANALYZE</div>
+              <div class="si"><svg class="icon"><use href="#i-shield"/></svg> SAFETY</div>
+              <div class="si"><svg class="icon"><use href="#i-trend"/></svg> PREDICT</div>
+            </div>
+            <div class="app-main">
+              <div class="app-chat">Summarize this Phase III protocol's primary endpoints &amp; eligibility.</div>
+              <div class="app-chat ai">Done — extracted 2 primary endpoints, 14 inclusion &amp; 9 exclusion criteria. Drafting the protocol summary…</div>
+              <div class="app-out">
+                <div class="ao-h"><svg class="icon"><use href="#i-check"/></svg> Protocol Summary generated</div>
+                <div class="ao-line w1"></div><div class="ao-line w2"></div><div class="ao-line w3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNDERSTANDING -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The industry</span><h2>What Pharma &amp; Life Sciences Runs On</h2><p>The most documentation-heavy, compliance-critical, time-sensitive industry — moving therapies from lab to patient.</p></div>
+      <div class="seg-grid">
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-spark"/></svg></span><b>Drug Discovery &amp; Development</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-file"/></svg></span><b>Clinical Trials (Phase I–IV)</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-database"/></svg></span><b>Clinical Data Management</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-linechart"/></svg></span><b>Biostatistics &amp; Analytics</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-scale"/></svg></span><b>Regulatory &amp; Medical Writing</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-shield"/></svg></span><b>Pharmacovigilance &amp; Safety</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-users"/></svg></span><b>CROs, Sponsors &amp; FSPs</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-factory"/></svg></span><b>Manufacturing (GxP)</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTLENECKS -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The problem</span><h2>Where Clinical Teams Lose Time</h2><p>The repetitive, high-stakes work that slows trials and drains expert hours.</p></div>
+      <div class="pain-grid">
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-clock"/></svg></span><p>Months-long <b>trial startup</b> &amp; protocol design cycles.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-database"/></svg></span><p>Manual <b>CRF review, edit checks &amp; data cleaning</b>.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-shield"/></svg></span><p>Slow, hand-written <b>AE/SAE safety narratives</b>.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-file"/></svg></span><p>Repetitive <b>medical writing</b> — SAP, CSR &amp; TLF shells.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-search"/></svg></span><p>Time-consuming <b>trial search</b> &amp; competitor landscape research.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-users"/></svg></span><p><b>Recruitment delays</b> &amp; manual patient-eligibility matching.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- iCLINICAL 9 MODULES -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Our flagship platform</span><h2>Meet iClinicalAI — Your Clinical Research Copilot</h2><p>A live, cloud-ready platform with 9 AI modules covering the full clinical research lifecycle.</p></div>
+      <div class="mod9-grid">
+        <div class="mod9-card reveal" style="--c1:#3c59e7;--c2:#22d3ee"><div class="mod9-top"><span class="mod9-ico"><svg class="icon"><use href="#i-bot"/></svg></span><div><div class="mod9-name">AI Assistant</div><div class="mod9-tag">Copilot</div></div></div><p>Central chatbot — upload Protocols, CSRs &amp; CRFs to summarize, extract &amp; draft.</p></div>
+        <div class="mod9-card reveal" style="--c1:#0ea5e9;--c2:#3c59e7"><div class="mod9-top"><span class="mod9-ico"><svg class="icon"><use href="#i-search"/></svg></span><div><div class="mod9-name">FIND</div><div class="mod9-tag">Trial Intelligence</div></div></div><p>Clinical trial search, registry intelligence &amp; competitor landscape.</p></div>
+        <div class="mod9-card reveal" style="--c1:#a855f7;--c2:#ec4899"><div class="mod9-top"><span class="mod9-ico"><svg class="icon"><use href="#i-file"/></svg></span><div><div class="mod9-name">DESIGN</div><div class="mod9-tag">Study Design</div></div></div><p>Protocol &amp; study design — endpoint/eligibility extraction, gap &amp; feasibility analysis.</p></div>
+        <div class="mod9-card reveal" style="--c1:#f97316;--c2:#ef4444"><div class="mod9-top"><span class="mod9-ico"><svg class="icon"><use href="#i-database"/></svg></span><div><div class="mod9-name">MANAGE</div><div class="mod9-tag">Data Management</div></div></div><p>CRF review, edit-check suggestions, query wording &amp; data cleaning.</p></div>
+        <div class="mod9-card reveal" style="--c1:#10b981;--c2:#14b8a6"><div class="mod9-top"><span class="mod9-ico"><svg class="icon"><use href="#i-linechart"/></svg></span><div><div class="mod9-name">ANALYZE</div><div class="mod9-tag">Biostatistics</div></div></div><p>SAP outlines, TLF shell drafts, CSR result sections &amp; study metrics.</p></div>
+        <div class="mod9-card reveal" style="--c1:#ef4444;--c2:#f43f5e"><div class="mod9-top"><span class="mod9-ico"><svg class="icon"><use href="#i-shield"/></svg></span><div><div class="mod9-name">SAFETY</div><div class="mod9-tag">Pharmacovigilance</div></div></div><p>AE/SAE narratives, causality checklists, MedDRA coding &amp; signal review.</p></div>
+        <div class="mod9-card reveal" style="--c1:#6366f1;--c2:#8b5cf6"><div class="mod9-top"><span class="mod9-ico"><svg class="icon"><use href="#i-users"/></svg></span><div><div class="mod9-name">RECRUIT</div><div class="mod9-tag">Patient &amp; Site</div></div></div><p>Eligibility matching, site feasibility &amp; recruitment risk scoring.</p></div>
+        <div class="mod9-card reveal" style="--c1:#f59e0b;--c2:#f97316"><div class="mod9-top"><span class="mod9-ico"><svg class="icon"><use href="#i-trend"/></svg></span><div><div class="mod9-name">PREDICT</div><div class="mod9-tag">Risk &amp; Forecast</div></div></div><p>Dropout risk, enrollment forecasting &amp; study-completion risk dashboards.</p></div>
+        <div class="mod9-card reveal" style="--c1:#64748b;--c2:#334155"><div class="mod9-top"><span class="mod9-ico"><svg class="icon"><use href="#i-lock"/></svg></span><div><div class="mod9-name">User Management</div><div class="mod9-tag">Access &amp; Audit</div></div></div><p>Role-based access for sponsors, SMEs &amp; reviewers, with full audit trail.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF BAND -->
+  <section class="proof">
+    <div class="wrap proof-inner reveal">
+      <span class="pbadge"><span class="dot"></span> Live in production</span>
+      <h2>iClinicalAI is proof of what we build — <span class="hl">production-ready AI, not promises.</span></h2>
+      <p>We didn't just consult — we designed, built and shipped a full SaaS-grade AI platform end-to-end. Axiora Labs builds <b>production-ready, enterprise AI products &amp; automation</b> — and we can build a custom platform like this for your business too.</p>
+      <div class="pcta">
+        <a class="btn btn-onblue" href="https://iclinical.ai/" target="_blank" rel="noopener">Visit iClinicalAI <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-onblue-ghost" href="/contact/">Build Your AI Product</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE AUTOMATE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">How it works</span><h2>From Clinical Documents to Audit-Ready Outputs</h2><p>AI does the heavy lifting — your experts review and approve.</p></div>
+      <div class="flow reveal">
+        <div class="flow-step" style="--c1:#3c59e7;--c2:#22d3ee"><span class="flow-ico"><svg class="icon"><use href="#i-file"/></svg></span><b>Clinical Docs</b><span>Protocol · CSR · CRF · SAP</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#a855f7;--c2:#ec4899"><span class="flow-ico"><svg class="icon"><use href="#i-bot"/></svg></span><b>AI Assistant</b><span>Reads &amp; understands</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#f97316;--c2:#ef4444"><span class="flow-ico"><svg class="icon"><use href="#i-spark"/></svg></span><b>Extract &amp; Draft</b><span>Summaries · narratives · SAP</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#10b981;--c2:#34d399"><span class="flow-ico"><svg class="icon"><use href="#i-shield"/></svg></span><b>Validate</b><span>Compliance &amp; quality checks</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#6366f1;--c2:#8b5cf6"><span class="flow-ico"><svg class="icon"><use href="#i-check"/></svg></span><b>Audit-Ready Output</b><span>Export to PDF/Word/Excel</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT (benefits) -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The impact</span><h2>What Changes for Your Trials</h2><p>Faster, cleaner, and more compliant clinical operations.</p></div>
+      <div class="ben-grid">
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-clock"/></svg></div><b>Faster Study Startup</b><span>Protocol design &amp; setup in a fraction of the time.</span></div>
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-database"/></svg></div><b>Faster Database Lock</b><span>Cleaner data, quicker query resolution.</span></div>
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-shield"/></svg></div><b>Regulatory Readiness</b><span>Standardized, audit-ready documentation.</span></div>
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-award"/></svg></div><b>Lower Cost, Higher Quality</b><span>Free experts from repetitive writing &amp; review.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap cta-inner reveal">
+      <h2>Bring AI to Your Clinical Research</h2>
+      <p>See iClinicalAI in action, or talk to us about building a production-ready AI platform for your organization.</p>
+      <div class="cta-btns"><a class="btn btn-white" href="https://iclinical.ai/" target="_blank" rel="noopener">Explore iClinicalAI <svg class="icon"><use href="#i-arrow"/></svg></a><a class="btn btn-white-ghost" href="/contact/">Book a Consultation</a></div>
+    </div>
+  </section>
+</main>
+
+<?php get_footer(); ?>

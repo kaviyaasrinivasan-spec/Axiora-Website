@@ -1,0 +1,119 @@
+<?php /* Template Name: Axiora — Manufacturing */ get_header(); ?>
+<main id="top">
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="wrap ind-hero">
+      <div class="copy reveal">
+        <span class="eyebrow">Industries · Manufacturing</span>
+        <h1>AI Automation for <span class="grad">Manufacturing</span></h1>
+        <p class="sub">Cut the paperwork behind the production line — automate invoices, vendor communication, quality documents and reporting so your plant runs leaner and faster.</p>
+        <div class="hcta">
+          <a class="btn btn-primary" href="/contact/">Book an Automation Assessment <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="/cargora/">See Our Platforms</a>
+        </div>
+      </div>
+      <div class="viswrap reveal">
+        <div class="float-chip one"><span class="fc-ic" style="background:linear-gradient(135deg,#10b981,#34d399)"><svg class="icon"><use href="#i-check"/></svg></span><span><b>85%</b><span>Touchless invoices</span></span></div>
+        <div class="float-chip two"><span class="fc-ic" style="background:linear-gradient(135deg,#3c59e7,#6b7cef)"><svg class="icon"><use href="#i-database"/></svg></span><span><b>Zero</b><span>Manual entry</span></span></div>
+        <div class="ops-panel">
+          <div class="ops-top"><span class="dots"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></span><span class="vt"><svg class="icon"><use href="#i-factory"/></svg> Axiora Labs Copilot · Plant Operations</span></div>
+          <div class="ops-body">
+            <div class="ship-row"><span class="ship-ico"><svg class="icon"><use href="#i-file"/></svg></span><span class="ship-txt"><b>INV-5521 · Vendor invoice</b><span>Data extracted → ERP</span></span><span class="pill auto">Extracted</span></div>
+            <div class="ship-row"><span class="ship-ico" style="background:linear-gradient(135deg,#a855f7,#7c3aed)"><svg class="icon"><use href="#i-check"/></svg></span><span class="ship-txt"><b>PO-3390 · 3-way match</b><span>Invoice · PO · GRN</span></span><span class="pill cleared">Matched</span></div>
+            <div class="ship-row"><span class="ship-ico" style="background:linear-gradient(135deg,#f97316,#ea580c)"><svg class="icon"><use href="#i-warehouse"/></svg></span><span class="ship-txt"><b>SKU-778 · Low stock</b><span>Reorder auto-raised</span></span><span class="pill transit">Reorder</span></div>
+            <div class="ship-row"><span class="ship-ico" style="background:linear-gradient(135deg,#0ea5e9,#3c59e7)"><svg class="icon"><use href="#i-shield"/></svg></span><span class="ship-txt"><b>QC-114 · Inspection report</b><span>Filed &amp; logged</span></span><span class="pill delivered">Filed</span></div>
+            <div class="ops-bar"><span></span></div>
+            <div class="ops-cap">85% of vendor invoices processed touchless this month</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNDERSTANDING -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The industry</span><h2>What Manufacturing Runs On</h2><p>From the shop floor to the back office — high-volume, document-heavy operations across every sector.</p></div>
+      <div class="seg-grid">
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-truck"/></svg></span><b>Automotive</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-cpu"/></svg></span><b>Electronics</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-gear"/></svg></span><b>Industrial Equipment</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-store"/></svg></span><b>FMCG / CPG</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-layers"/></svg></span><b>Chemicals &amp; Process</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-factory"/></svg></span><b>Discrete Manufacturing</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-warehouse"/></svg></span><b>Procurement &amp; Supply Chain</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-shield"/></svg></span><b>Quality &amp; Compliance</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTLENECKS -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The problem</span><h2>Where Plants Lose Time &amp; Money</h2><p>The manual back-office work that slows production and creates costly errors.</p></div>
+      <div class="pain-grid">
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-file"/></svg></span><p>Manual <b>invoice &amp; PO processing</b> into ERP (SAP/Oracle/Tally).</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-mail"/></svg></span><p>Repetitive <b>vendor communication</b>, RFQs &amp; follow-ups.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-warehouse"/></svg></span><p><b>Inventory &amp; reorder alerts</b> tracked by hand.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-shield"/></svg></span><p><b>Quality inspection &amp; compliance docs</b> processed manually.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-linechart"/></svg></span><p><b>Production &amp; shift reports</b> compiled by hand.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-gear"/></svg></span><p><b>Maintenance logs</b> &amp; downtime tracking on paper/spreadsheets.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE AUTOMATE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">How it works</span><h2>How Axiora Labs Automates It</h2><p>From vendor document to reconciled ERP entry — automatically.</p></div>
+      <div class="flow reveal">
+        <div class="flow-step" style="--c1:#3c59e7;--c2:#22d3ee"><span class="flow-ico"><svg class="icon"><use href="#i-file"/></svg></span><b>Documents In</b><span>Invoices · POs · GRNs</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#a855f7;--c2:#ec4899"><span class="flow-ico"><svg class="icon"><use href="#i-bot"/></svg></span><b>AI Extract</b><span>Captures line items</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#f97316;--c2:#ef4444"><span class="flow-ico"><svg class="icon"><use href="#i-check"/></svg></span><b>3-Way Match</b><span>Invoice · PO · GRN</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#10b981;--c2:#34d399"><span class="flow-ico"><svg class="icon"><use href="#i-database"/></svg></span><b>Sync to ERP</b><span>SAP · Oracle · Tally</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#6366f1;--c2:#8b5cf6"><span class="flow-ico"><svg class="icon"><use href="#i-linechart"/></svg></span><b>Alerts &amp; Reports</b><span>Stock · production · QC</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE HELP -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Our edge</span><h2>How We Help Your Plant</h2><p>Proven document AI &amp; automation, integrated with the systems you already run.</p></div>
+      <div class="prod-grid">
+        <div class="prod-card reveal" style="--c1:#f97316;--c2:#ea580c"><span class="prod-ico"><svg class="icon"><use href="#i-flow"/></svg></span><h3>BoostEntry AI</h3><p>Extracts invoice, PO &amp; GRN data from PDFs/images, validates it, and updates your ERP — no manual typing.</p><a class="prod-link" href="https://boostentryai.com/" target="_blank" rel="noopener">Visit BoostEntry AI <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        <div class="prod-card reveal" style="--c1:#3c59e7;--c2:#22d3ee"><span class="prod-ico"><svg class="icon"><use href="#i-zap"/></svg></span><h3>Workflow Automation</h3><p>Automate vendor comms, approvals, reorder &amp; reporting — no-code (Zapier/Make/n8n) plus custom builds.</p></div>
+        <div class="prod-card reveal" style="--c1:#10b981;--c2:#34d399"><span class="prod-ico"><svg class="icon"><use href="#i-database"/></svg></span><h3>ERP Integration</h3><p>Connect SAP, Oracle &amp; Tally so data flows across procurement, inventory &amp; finance automatically.</p></div>
+        <div class="prod-card reveal" style="--c1:#a855f7;--c2:#7c3aed"><span class="prod-ico"><svg class="icon"><use href="#i-rocket"/></svg></span><h3>Custom AI Products</h3><p>We build production-ready AI platforms end-to-end — proven with Cargora &amp; iClinicalAI.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The impact</span><h2>What Changes for Your Operation</h2><p>Leaner back office, cleaner data, and better visibility across the plant.</p></div>
+      <div class="ben-grid">
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-clock"/></svg></div><b>Faster Invoice/PO Cycles</b><span>Touchless processing, quicker approvals.</span></div>
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-check"/></svg></div><b>Fewer Data Errors</b><span>Automated matching &amp; validation.</span></div>
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-dollar"/></svg></div><b>Lower Operating Cost</b><span>Less manual effort, fewer disputes.</span></div>
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-trend"/></svg></div><b>Better Visibility</b><span>Real-time inventory, production &amp; QC insight.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap cta-inner reveal">
+      <h2>Run a Leaner, Smarter Plant</h2>
+      <p>Book a free automation assessment and we'll map where AI can cut manual paperwork, speed up your procurement-to-pay, and reduce costs.</p>
+      <div class="cta-btns"><a class="btn btn-white" href="/contact/">Book an Assessment <svg class="icon"><use href="#i-arrow"/></svg></a><a class="btn btn-white-ghost" href="/cargora/">See Our Platforms</a></div>
+    </div>
+  </section>
+</main>
+
+<?php get_footer(); ?>

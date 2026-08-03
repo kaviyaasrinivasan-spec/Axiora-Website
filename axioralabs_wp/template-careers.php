@@ -1,0 +1,75 @@
+<?php /* Template Name: WB — Careers */ get_header(); ?>
+<main id="top">
+  <section class="page-hero">
+    <div class="wrap inner">
+      <span class="eyebrow reveal">Join the team</span>
+      <h1 class="reveal">Build the Future of <span class="grad">AI Automation</span> With Us</h1>
+      <p class="reveal">We're a fast-growing AI company solving real-world business problems. If you love building intelligent systems, you'll fit right in.</p>
+      <div class="reveal"><button class="btn btn-primary" type="button" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">See Open Roles <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+    </div>
+  </section>
+
+  <!-- PERKS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Why join us</span><h2>Why Work at Axiora Labs</h2><p>Real work, real impact, real growth.</p></div>
+      <div class="perks-grid">
+        <div class="perk-card reveal" style="--c1:#3c59e7;--c2:#22d3ee"><div class="perk-ico"><svg class="icon"><use href="#i-rocket"/></svg></div><h3>Real AI Products</h3><p>Work on production AI used by real logistics and enterprise companies — not toy projects.</p></div>
+        <div class="perk-card reveal" style="--c1:#a855f7;--c2:#ec4899"><div class="perk-ico"><svg class="icon"><use href="#i-award"/></svg></div><h3>Learn From the Best</h3><p>Grow under an Enterprise Solution Architect with 20+ years building large-scale systems.</p></div>
+        <div class="perk-card reveal" style="--c1:#10b981;--c2:#34d399"><div class="perk-ico"><svg class="icon"><use href="#i-trend"/></svg></div><h3>Fast Growth</h3><p>A young, fast-moving company where your work has real impact from day one.</p></div>
+        <div class="perk-card reveal" style="--c1:#f59e0b;--c2:#f97316"><div class="perk-ico"><svg class="icon"><use href="#i-heart"/></svg></div><h3>Great Culture</h3><p>A supportive team that values ownership, curiosity, and quality over busywork.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN POSITIONS -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">We're hiring</span><h2>Open Positions</h2><p>Find your role and apply in minutes.</p></div>
+      <div class="jobs-grid">
+        <div class="job-card reveal"><div class="job-ico"><svg class="icon"><use href="#i-cpu"/></svg></div><div class="job-info"><h3>AI Engineer</h3><div class="job-meta">Full-time<span class="dot"></span>Chennai</div><p>Build LLM apps, AI agents, and automation pipelines for enterprise clients.</p></div><button class="job-apply" type="button" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+        <div class="job-card reveal"><div class="job-ico"><svg class="icon"><use href="#i-trend"/></svg></div><div class="job-info"><h3>Digital Marketing</h3><div class="job-meta">Full-time<span class="dot"></span>Chennai</div><p>Drive our brand, content, and lead generation across channels.</p></div><button class="job-apply" type="button" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+        <div class="job-card reveal"><div class="job-ico"><svg class="icon"><use href="#i-users"/></svg></div><div class="job-info"><h3>Sales Coordinator</h3><div class="job-meta">Full-time<span class="dot"></span>Chennai</div><p>Manage leads, follow-ups, and client communication end to end.</p></div><button class="job-apply" type="button" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+        <div class="job-card reveal"><div class="job-ico"><svg class="icon"><use href="#i-brief"/></svg></div><div class="job-info"><h3>Executive Assistant</h3><div class="job-meta">Full-time<span class="dot"></span>Chennai</div><p>Support leadership with scheduling, coordination, and operations.</p></div><button class="job-apply" type="button" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY FORM -->
+  <section class="section" id="apply">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Application</span><h2>Apply Now</h2><p>Fill out the form below and take the first step towards your new career.</p></div>
+      <div class="apply-wrap">
+        <div class="form-card reveal">
+          <form class="form-grid" onsubmit="return false">
+            <div class="field"><label>Full Name <span class="req">*</span></label><input type="text" name="name" placeholder="Enter your full name" required></div>
+            <div class="field-row">
+              <div class="field"><label>Phone Number <span class="req">*</span></label><input type="tel" name="phone" placeholder="Your phone number" required></div>
+              <div class="field"><label>City <span class="req">*</span></label><input type="text" name="city" placeholder="Your city" required></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label>Sex <span class="req">*</span></label><select name="sex"><option value="" disabled selected>Select</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+              <div class="field"><label>Position <span class="req">*</span></label><select name="job"><option value="" disabled selected>Select a position</option><option>AI Engineer</option><option>Digital Marketing</option><option>Sales Coordinator</option><option>Executive Assistant</option></select></div>
+            </div>
+            <div class="field">
+              <label>Upload Resume <span class="req">*</span></label>
+              <div class="file-field"><span class="ff-ico"><svg class="icon"><use href="#i-upload"/></svg></span><input type="file" name="resume" accept=".pdf,.doc,.docx" required></div>
+              <div class="file-note">Accepted formats: PDF, DOC, DOCX</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Application <svg class="icon"><use href="#i-arrow"/></svg></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap cta-inner reveal">
+      <h2>Don't See Your Role?</h2>
+      <p>We're always looking for talented people. Send your resume and tell us how you can help.</p>
+      <div class="cta-btns"><a class="btn btn-white" href="mailto:sales@axioralabs.ai">Email Us <svg class="icon"><use href="#i-mail"/></svg></a></div>
+    </div>
+  </section>
+</main>
+
+<?php get_footer(); ?>

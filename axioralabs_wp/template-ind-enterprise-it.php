@@ -1,0 +1,119 @@
+<?php /* Template Name: Axiora — Enterprise IT & GCCs */ get_header(); ?>
+<main id="top">
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="wrap ind-hero">
+      <div class="copy reveal">
+        <span class="eyebrow">Industries · Enterprise IT &amp; GCCs</span>
+        <h1>AI Automation for Enterprise IT &amp; <span class="grad">Global Capability Centers</span></h1>
+        <p class="sub">Help your GCC and IT teams do more with the same headcount — automate service desks, reporting, reconciliations and repetitive engineering work, with AI that fits your enterprise stack.</p>
+        <div class="hcta">
+          <a class="btn btn-primary" href="/contact/">Book an Automation Assessment <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="/cargora/">See Our Platforms</a>
+        </div>
+      </div>
+      <div class="viswrap reveal">
+        <div class="float-chip one"><span class="fc-ic" style="background:linear-gradient(135deg,#10b981,#34d399)"><svg class="icon"><use href="#i-check"/></svg></span><span><b>82%</b><span>Auto-resolved</span></span></div>
+        <div class="float-chip two"><span class="fc-ic" style="background:linear-gradient(135deg,#3c59e7,#6b7cef)"><svg class="icon"><use href="#i-bot"/></svg></span><span><b>24/7</b><span>AI Copilot</span></span></div>
+        <div class="ops-panel">
+          <div class="ops-top"><span class="dots"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></span><span class="vt"><svg class="icon"><use href="#i-bot"/></svg> Axiora Labs Copilot · IT Operations</span></div>
+          <div class="ops-body">
+            <div class="ship-row"><span class="ship-ico"><svg class="icon"><use href="#i-lock"/></svg></span><span class="ship-txt"><b>INC-4821 · Password reset</b><span>Resolved by AI copilot</span></span><span class="pill cleared">Auto-resolved</span></div>
+            <div class="ship-row"><span class="ship-ico" style="background:linear-gradient(135deg,#a855f7,#7c3aed)"><svg class="icon"><use href="#i-users"/></svg></span><span class="ship-txt"><b>REQ-2290 · Access request</b><span>Routed to approver</span></span><span class="pill transit">Routed</span></div>
+            <div class="ship-row"><span class="ship-ico" style="background:linear-gradient(135deg,#0ea5e9,#3c59e7)"><svg class="icon"><use href="#i-linechart"/></svg></span><span class="ship-txt"><b>Monthly F&amp;A report</b><span>Compiled &amp; reconciled</span></span><span class="pill delivered">Generated</span></div>
+            <div class="ship-row"><span class="ship-ico" style="background:linear-gradient(135deg,#f97316,#ea580c)"><svg class="icon"><use href="#i-database"/></svg></span><span class="ship-txt"><b>New hire · Provisioning</b><span>Accounts created across systems</span></span><span class="pill auto">Automated</span></div>
+            <div class="ops-bar"><span></span></div>
+            <div class="ops-cap">82% of today's tickets &amp; requests handled automatically</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNDERSTANDING -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The space</span><h2>What GCCs &amp; Enterprise IT Run</h2><p>High-volume, SLA-driven operations powering global businesses across every function.</p></div>
+      <div class="seg-grid">
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-bot"/></svg></span><b>IT Service Desk</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-code"/></svg></span><b>Application Support</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-dollar"/></svg></span><b>F&amp;A Shared Services</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-users"/></svg></span><b>HR Shared Services</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-bag"/></svg></span><b>Procurement Operations</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-linechart"/></svg></span><b>Data &amp; Analytics</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-gear"/></svg></span><b>Engineering, QA &amp; DevOps</b></div>
+        <div class="seg-card reveal"><span class="seg-ico"><svg class="icon"><use href="#i-phone"/></svg></span><b>Customer &amp; Internal Support</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTLENECKS -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The problem</span><h2>Where GCC &amp; IT Teams Lose Capacity</h2><p>The repetitive, high-volume work that eats FTE hours and slows SLAs.</p></div>
+      <div class="pain-grid">
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-bot"/></svg></span><p>Thousands of routine <b>service-desk tickets</b> — resets, access, "how do I…".</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-dollar"/></svg></span><p>Manual <b>report generation &amp; reconciliation</b> in F&amp;A shared services.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-code"/></svg></span><p>Repetitive <b>testing, QA &amp; documentation</b> in engineering teams.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-users"/></svg></span><p>Slow <b>onboarding/offboarding</b> &amp; access provisioning.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-layers"/></svg></span><p>Knowledge scattered across <b>wikis, PDFs &amp; SharePoint</b>.</p></div>
+        <div class="pain-card reveal"><span class="px"><svg class="icon"><use href="#i-database"/></svg></span><p>Manual <b>data entry between systems</b> — SAP ↔ ServiceNow ↔ Workday.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE AUTOMATE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">How it works</span><h2>How Axiora Labs Automates It</h2><p>From incoming request to resolved &amp; logged — with AI handling the routine.</p></div>
+      <div class="flow reveal">
+        <div class="flow-step" style="--c1:#3c59e7;--c2:#22d3ee"><span class="flow-ico"><svg class="icon"><use href="#i-file"/></svg></span><b>Request / Ticket</b><span>Email · portal · chat</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#a855f7;--c2:#ec4899"><span class="flow-ico"><svg class="icon"><use href="#i-bot"/></svg></span><b>AI Triage</b><span>Understands &amp; classifies</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#f97316;--c2:#ef4444"><span class="flow-ico"><svg class="icon"><use href="#i-zap"/></svg></span><b>Auto-Resolve / Route</b><span>Or hand off to a human</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#10b981;--c2:#34d399"><span class="flow-ico"><svg class="icon"><use href="#i-database"/></svg></span><b>Update Systems</b><span>ITSM · ERP · HRMS</span></div>
+        <div class="flow-arrow"><svg class="icon"><use href="#i-right"/></svg></div>
+        <div class="flow-step" style="--c1:#6366f1;--c2:#8b5cf6"><span class="flow-ico"><svg class="icon"><use href="#i-linechart"/></svg></span><b>Analytics &amp; Insights</b><span>SLA &amp; volume dashboards</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE HELP -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Our edge</span><h2>How We Help Your GCC</h2><p>The same engineering behind Cargora &amp; iClinicalAI — applied to your internal operations.</p></div>
+      <div class="prod-grid">
+        <div class="prod-card reveal" style="--c1:#3c59e7;--c2:#22d3ee"><span class="prod-ico"><svg class="icon"><use href="#i-bot"/></svg></span><h3>AI Copilots &amp; Assistants</h3><p>Service-desk, knowledge and engineering copilots that resolve tickets and assist your teams 24/7.</p></div>
+        <div class="prod-card reveal" style="--c1:#f97316;--c2:#ef4444"><span class="prod-ico"><svg class="icon"><use href="#i-zap"/></svg></span><h3>Workflow Automation</h3><p>Automate processes across ITSM, ERP &amp; HRMS — no-code (Zapier/Make/n8n) plus custom builds.</p></div>
+        <div class="prod-card reveal" style="--c1:#10b981;--c2:#34d399"><span class="prod-ico"><svg class="icon"><use href="#i-database"/></svg></span><h3>Enterprise Integrations</h3><p>Connect ServiceNow, SAP, Oracle, Workday &amp; Jira so data flows without manual entry.</p></div>
+        <div class="prod-card reveal" style="--c1:#a855f7;--c2:#7c3aed"><span class="prod-ico"><svg class="icon"><use href="#i-rocket"/></svg></span><h3>Production-Ready Platforms</h3><p>We build internal AI platforms end-to-end — proven with Cargora &amp; iClinicalAI.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">The impact</span><h2>What Changes for Your Operation</h2><p>More capacity, faster SLAs, and lower cost — without adding headcount.</p></div>
+      <div class="ben-grid">
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-clock"/></svg></div><b>Faster Resolution</b><span>Routine tickets resolved in seconds, not hours.</span></div>
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-trend"/></svg></div><b>More Output per FTE</b><span>Do more with the same team.</span></div>
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-dollar"/></svg></div><b>Lower Operating Cost</b><span>Stronger cost-optimization for the GCC.</span></div>
+        <div class="ben-card reveal"><div class="ben-ico"><svg class="icon"><use href="#i-shield"/></svg></div><b>Better SLA &amp; Compliance</b><span>Consistent, auditable, accurate operations.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap cta-inner reveal">
+      <h2>Scale Your GCC with AI</h2>
+      <p>Book a free automation assessment and we'll map exactly where AI can lift capacity, speed up SLAs, and cut cost across your IT and shared-services towers.</p>
+      <div class="cta-btns"><a class="btn btn-white" href="/contact/">Book an Assessment <svg class="icon"><use href="#i-arrow"/></svg></a><a class="btn btn-white-ghost" href="/cargora/">See Our Platforms</a></div>
+    </div>
+  </section>
+</main>
+
+<?php get_footer(); ?>

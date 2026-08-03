@@ -1,0 +1,79 @@
+<?php /* Template Name: WB — Terms & Conditions */ get_header(); ?>
+<main id="top">
+  <section class="page-hero">
+    <div class="wrap inner">
+      <span class="eyebrow reveal">Legal</span>
+      <h1 class="reveal">Terms &amp; Conditions</h1>
+      <span class="legal-meta reveal"><svg class="icon"><use href="#i-clock"/></svg> Last Updated: 09 December 2025</span>
+    </div>
+  </section>
+  <section class="section" style="padding-top:20px">
+    <div class="wrap">
+      <div class="legal-wrap">
+        <div class="legal-card reveal">
+          <h2>Terms &amp; Conditions for Axiora Labs</h2>
+          <p class="intro">Welcome to AxioraLabs.ai. By accessing or using our website, tools, or AI-based services, you agree to be bound by the following Terms &amp; Conditions. Please read them carefully before using our platform.</p>
+
+          <h3>1. Acceptance of Terms</h3>
+          <p>By visiting or using Axiora Labs, you confirm that:</p>
+          <ul><li>You are at least 18 years old.</li><li>You have the legal capacity to enter into this agreement.</li><li>You agree to comply with all terms, policies, and applicable laws.</li></ul>
+          <p>If you do not agree with any part of these Terms, you must not use the website or any of our services.</p>
+
+          <h3>2. About Axiora Labs</h3>
+          <p>Axiora Labs provides AI-driven automation tools, business process enhancement solutions, workflow integrations, and digital productivity services to individuals and businesses. All content, information, and services are provided for business support and operational assistance.</p>
+
+          <h3>3. Use of the Website</h3>
+          <p>You agree not to:</p>
+          <ul><li>Misuse the platform for unlawful, harmful, or fraudulent activities.</li><li>Attempt unauthorized access to our systems or servers.</li><li>Interfere with the security, performance, or functionality of the service.</li><li>Copy, modify, or reverse engineer any part of our website or AI tools.</li></ul>
+          <p>We reserve the right to restrict or terminate access for any misuse.</p>
+
+          <h3>4. Account Registration</h3>
+          <p>Some features may require creating an account. You agree to provide accurate and updated information, maintain confidentiality of your login credentials, and take full responsibility for any activities under your account. We are not liable for any loss caused by unauthorized account access.</p>
+
+          <h3>5. Service Availability</h3>
+          <p>We strive to keep our services active and error-free, but we do not guarantee uninterrupted access, error-free operations, or complete accuracy of content, results, or AI-generated outputs. We may modify or discontinue features, services, or tools at any time without prior notice.</p>
+
+          <h3>6. AI-Generated Suggestions &amp; Output</h3>
+          <p>Our platform provides AI-driven insights, automation suggestions, and content generation. However, all AI outputs should be used with professional judgment; we do not guarantee 100% accuracy, completeness, or suitability; and you are solely responsible for how you use generated suggestions or data. Axiora Labs is not liable for losses arising from reliance on AI-generated information.</p>
+
+          <h3>7. Payments, Pricing &amp; Refunds</h3>
+          <p>If you purchase any paid services:</p>
+          <ul><li>You agree to provide accurate billing information.</li><li>Prices may change, and updated pricing will be reflected on the website.</li><li>Payments are non-refundable unless clearly stated in a specific plan.</li><li>Subscription renewals may occur automatically unless cancelled.</li></ul>
+
+          <h3>8. Intellectual Property Rights</h3>
+          <p>All content on Axiora Labs — including texts, designs, UI elements, logos, branding, code, and AI tools — is the exclusive property of Axiora Labs. You may not copy, distribute, resell, modify, or use the content for commercial purposes without written permission. Unauthorized use may lead to legal action.</p>
+
+          <h3>9. Third-Party Services</h3>
+          <p>Our platform may integrate with third-party tools (e.g., automation platforms, APIs, analytics tools, payment gateways). We are not responsible for their availability, performance, data handling, or terms &amp; policies. Using them is at your own risk.</p>
+
+          <h3>10. Privacy Policy</h3>
+          <p>Your privacy is important to us. Any personal data collected is handled according to our Privacy Policy, which explains what data we collect, how it is used, and your rights regarding your information. You must read and agree to the Privacy Policy along with these Terms.</p>
+
+          <h3>11. Limitation of Liability</h3>
+          <p>Axiora Labs will not be held liable for technical issues, data loss, business loss, indirect or consequential damages, or inaccuracies in AI-generated output. You use our platform at your own risk.</p>
+
+          <h3>12. Indemnification</h3>
+          <p>You agree to indemnify and hold Axiora Labs harmless from any claims, damages, or expenses arising from misuse of the website, violation of these Terms, or infringement of the rights of others.</p>
+
+          <h3>13. Termination</h3>
+          <p>We may suspend or terminate your access at any time if you violate the Terms, misuse our services, or we detect fraudulent or harmful activity. You may stop using the service at any time.</p>
+
+          <h3>14. Changes to Terms</h3>
+          <p>We may update or modify these Terms from time to time. Updated Terms will be posted on this page with a revised "Last Updated" date. Continued use of the website means you accept the changes.</p>
+
+          <h3>15. Governing Law</h3>
+          <p>These Terms are governed by the laws of India. Any disputes will be handled under the jurisdiction of the courts in Tamil Nadu, India.</p>
+
+          <h3>16. Contact Information</h3>
+          <p>For questions, support, or clarifications, you can contact us at:</p>
+          <div class="contact-box">
+            <p>📧 <a href="mailto:sales@axioralabs.ai">sales@axioralabs.ai</a></p>
+            <p>🌐 <a href="https://axioralabs.ai" target="_blank" rel="noopener">https://axioralabs.ai</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<?php get_footer(); ?>

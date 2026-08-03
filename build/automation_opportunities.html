@@ -1,0 +1,151 @@
+<title>Axiora Labs — Book Your Free AI Automation Audit</title>
+<style>
+  @font-face{font-family:'Outfit';src:url(data:font/woff2;base64,__OUTFIT__) format('woff2');font-weight:100 900;font-display:swap;}
+  @font-face{font-family:'Inter';src:url(data:font/woff2;base64,__INTER__) format('woff2');font-weight:100 900;font-display:swap;}
+  :root{color-scheme:light;--brand:#3c59e7;--brand-dark:#2d48d6;--violet:#6b7cef;--violet-deep:#52259b;--navy:#131f4e;--red:#e02b20;
+    --ink:#0f1730;--body:#475069;--muted:#6b7490;--line:#e6e9f4;--line-strong:#d6dbee;--bg:#ffffff;--bg-soft:#f5f7fd;--bg-tint:#eef2fe;
+    --shadow-sm:0 1px 3px rgba(15,23,48,.06);--shadow-md:0 10px 30px -12px rgba(30,45,120,.22);--shadow-lg:0 24px 60px -20px rgba(30,45,120,.32);
+    --display:'Outfit',system-ui,sans-serif;--sans:'Inter',system-ui,sans-serif;}
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3,h4{font-family:var(--display);color:var(--ink);margin:0;letter-spacing:-.02em;line-height:1.1;}
+  p{margin:0;} a{color:inherit;text-decoration:none;}
+  .icon{width:1em;height:1em;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--display);font-weight:700;font-size:14px;border-radius:100px;padding:15px 28px;cursor:pointer;border:none;transition:transform .25s cubic-bezier(.22,.61,.36,1),box-shadow .25s,background .2s;letter-spacing:.02em;}
+  .btn .icon{width:17px;height:17px;transition:transform .2s;} .btn:hover .icon{transform:translateX(3px);}
+
+  /* header */
+  header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+  .hd{display:flex;align-items:center;height:64px;}
+  .brand{display:flex;align-items:center;gap:11px;}
+  .brand img{width:38px;height:38px;object-fit:contain;transition:transform .4s cubic-bezier(.22,.61,.36,1);}
+  .brand:hover img{transform:rotate(-8deg) scale(1.08);}
+  .brand span{font-family:var(--display);font-weight:700;font-size:21px;color:var(--ink);} .brand span b{color:var(--brand);}
+
+  /* landing */
+  .land{position:relative;overflow:hidden;padding:52px 0 80px;background:
+    radial-gradient(50% 55% at 12% 0%,rgba(60,89,231,.10),transparent 70%),
+    radial-gradient(45% 45% at 95% 20%,rgba(107,124,239,.12),transparent 70%),var(--bg);}
+  .glow{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;}
+  .glow.a{width:52%;height:52%;background:rgba(60,89,231,.06);top:-10%;left:-10%;animation:drift 13s ease-in-out infinite;}
+  .glow.b{width:52%;height:52%;background:rgba(37,120,255,.06);bottom:8%;right:-10%;animation:drift 16s ease-in-out infinite reverse;}
+  @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-24px) scale(1.12)}}
+  .land-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
+
+  /* left value column */
+  .val{display:flex;flex-direction:column;gap:22px;}
+  .eyebrow{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);background:var(--bg-tint);border:1px solid var(--line-strong);padding:7px 14px;border-radius:100px;}
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brand);}
+  .val h1{font-size:clamp(30px,4.4vw,46px);font-weight:800;letter-spacing:-.035em;color:#141a2e;}
+  .val h1 .grad{background:linear-gradient(100deg,var(--brand),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .val .sub{font-size:16px;color:var(--muted);line-height:1.7;max-width:480px;}
+  .benefits{display:flex;flex-direction:column;gap:14px;margin-top:4px;}
+  .benefit{display:flex;align-items:flex-start;gap:13px;}
+  .benefit .bi{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));flex:none;box-shadow:0 8px 16px -8px var(--c1);}
+  .benefit .bi .icon{width:19px;height:19px;}
+  .benefit b{font-family:var(--display);font-size:15px;color:var(--ink);display:block;}
+  .benefit span{font-size:13.5px;color:var(--muted);line-height:1.5;}
+  .trust-row{display:flex;gap:20px;flex-wrap:wrap;margin-top:8px;padding-top:20px;border-top:1px dashed var(--line-strong);}
+  .trust-row .t{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--body);}
+  .trust-row .t .icon{width:17px;height:17px;color:#10b981;}
+
+  /* form card */
+  .form-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:22px;padding:34px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;}
+  .form-card::after{content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(60,89,231,.1),transparent 65%);}
+  .form-head{margin-bottom:22px;position:relative;z-index:1;}
+  .form-head h2{font-size:23px;font-weight:800;}
+  .form-head p{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.5;}
+  .form-grid{display:flex;flex-direction:column;gap:15px;position:relative;z-index:1;}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field label{font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:#5a6382;}
+  .field label .req{color:var(--red);}
+  .field input,.field select{width:100%;border:1.5px solid var(--line-strong);border-radius:11px;padding:12px 14px;font-family:var(--sans);font-size:14px;color:var(--ink);background:var(--bg-soft);transition:border-color .2s,box-shadow .2s,background .2s;}
+  .field input::placeholder{color:#aab2c8;}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--brand);background:#fff;box-shadow:0 0 0 4px rgba(60,89,231,.12);}
+  .field select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:38px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%236b7490' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 6 8 10 12 6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .phone-wrap{position:relative;} .phone-wrap .pfx{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-weight:600;font-size:14px;color:var(--muted);pointer-events:none;} .phone-wrap input{padding-left:48px;}
+  .form-card .btn{width:100%;background:var(--brand);color:#fff;text-transform:uppercase;box-shadow:0 12px 26px -12px rgba(60,89,231,.6);margin-top:6px;}
+  .form-card .btn:hover{background:var(--brand-dark);transform:translateY(-2px);}
+  .form-foot{display:flex;align-items:center;gap:8px;justify-content:center;font-size:12px;color:var(--muted);margin-top:2px;}
+  .form-foot .icon{width:14px;height:14px;color:#10b981;}
+
+  /* whatsapp */
+  .wa{position:fixed;bottom:26px;right:26px;z-index:50;display:inline-flex;align-items:center;gap:9px;background:#10b981;color:#fff;font-family:var(--display);font-weight:700;font-size:13px;padding:14px 20px;border-radius:100px;box-shadow:0 14px 30px -10px rgba(16,185,129,.5);transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s;}
+  .wa:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 36px -10px rgba(16,185,129,.6);}
+  .wa .icon{width:18px;height:18px;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.reveal{opacity:1;transform:none;}}
+  @media(max-width:900px){.land-grid{grid-template-columns:1fr;gap:40px;} .val{text-align:center;align-items:center;} .eyebrow{align-self:center;} .benefit{text-align:left;}}
+  @media(max-width:480px){.field-row{grid-template-columns:1fr;} .form-card{padding:26px 22px;} .wa span{display:none;} .wa{padding:15px;}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></symbol>
+  <symbol id="i-dollar" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+</defs></svg>
+
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="https://claude.ai/code/artifact/5941499c-bbe3-48a8-95c1-3daa052d6065"><img src="data:image/png;base64,__LOGOT__" alt="Axiora Labs"><span>Axiora<b>Labs</b></span></a>
+  </div>
+</header>
+
+<section class="land">
+  <span class="glow a"></span><span class="glow b"></span>
+  <div class="wrap land-grid">
+    <!-- VALUE -->
+    <div class="val reveal">
+      <span class="eyebrow">Free AI Automation Audit</span>
+      <h1>Automate Repetitive Work &amp; <span class="grad">Save Lakhs Every Year</span></h1>
+      <p class="sub">Book a free audit and our experts will show you exactly where AI can cut manual work, reduce costs, and speed up your operations — with a clear roadmap and cost savings.</p>
+      <div class="benefits">
+        <div class="benefit"><span class="bi" style="--c1:#3c59e7;--c2:#22d3ee"><svg class="icon"><use href="#i-map"/></svg></span><span><b>A custom automation roadmap</b><span>We map your highest-impact automation opportunities.</span></span></div>
+        <div class="benefit"><span class="bi" style="--c1:#10b981;--c2:#34d399"><svg class="icon"><use href="#i-dollar"/></svg></span><span><b>Exact cost savings</b><span>See the time &amp; money AI can save your team.</span></span></div>
+        <div class="benefit"><span class="bi" style="--c1:#f97316;--c2:#ef4444"><svg class="icon"><use href="#i-zap"/></svg></span><span><b>Works with your systems</b><span>No rip-and-replace — AI works with your ERP, CRM &amp; tools.</span></span></div>
+      </div>
+      <div class="trust-row">
+        <span class="t"><svg class="icon"><use href="#i-check"/></svg> 100% Free</span>
+        <span class="t"><svg class="icon"><use href="#i-clock"/></svg> Reply in 24 hrs</span>
+        <span class="t"><svg class="icon"><use href="#i-shield"/></svg> No obligation</span>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card reveal">
+      <div class="form-head">
+        <h2>Book Your Free AI Automation Audit</h2>
+        <p>Automate repetitive tasks, reduce manual work, and save lakhs every year with AI automation.</p>
+      </div>
+      <form class="form-grid" onsubmit="return false">
+        <div class="field"><label>Full Name <span class="req">*</span></label><input type="text" name="fullName" placeholder="e.g. Rahul Sharma" required></div>
+        <div class="field"><label>Company Name <span class="req">*</span></label><input type="text" name="companyName" placeholder="e.g. Acme Tech Solutions" required></div>
+        <div class="field"><label>Mobile Number <span class="req">*</span></label><div class="phone-wrap"><span class="pfx">+91</span><input type="tel" name="mobileNumber" placeholder="9876543210" maxlength="10"></div></div>
+        <div class="field"><label>Number of Employees <span class="req">*</span></label><select name="employeeCount"><option value="" disabled selected>Select range</option><option>1–10</option><option>11–25</option><option>26–50</option><option>51–100</option><option>100+</option></select></div>
+        <div class="field"><label>Biggest Repetitive Process <span class="req">*</span></label><select name="repetitiveProcess"><option value="" disabled selected>Select process</option><option>Data Entry</option><option>Customer Follow-ups</option><option>Service Verification</option><option>Invoice Processing</option><option>Report Generation</option><option>Approval Workflow</option><option>Document Verification</option><option>Other</option></select></div>
+        <div class="field"><label>How soon do you want to implement? <span class="req">*</span></label><select name="willingToInvest"><option value="" disabled selected>Select option</option><option>Immediately</option><option>Within 1 Month</option><option>Within 3 Months</option><option>Just Exploring</option></select></div>
+        <button type="submit" class="btn">Book a Call <svg class="icon"><use href="#i-arrow"/></svg></button>
+        <div class="form-foot"><svg class="icon"><use href="#i-check"/></svg> We reply within 24 business hours. No spam, ever.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<a class="wa" href="https://wa.me/918122784236?text=Hi%20Axiora Labs%2C%20I%20am%20interested%20in%20booking%20a%20Free%20AI%20Automation%20Audit%20for%20my%20business." target="_blank" rel="noopener"><svg class="icon"><use href="#i-chat"/></svg><span>Chat with Us</span></a>
+
+<script>
+  (function(){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('in',e.isIntersecting);});},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  })();
+</script>

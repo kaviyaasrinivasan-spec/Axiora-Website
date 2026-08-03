@@ -1,0 +1,266 @@
+<?php /* Template Name: WB — Cargora Platform */ get_header(); ?>
+<main id="top">
+  <!-- HERO -->
+  <section class="lp-hero">
+    <span class="glow"></span><span class="glow two"></span>
+    <div class="wrap lp-inner">
+      <div class="lp-brand reveal"><span class="lp-mark"><svg class="icon"><use href="#i-compass"/></svg></span><span class="lp-name">Cargora</span></div>
+      <span class="lp-tag reveal">— The AI Operations Copilot for Logistics —</span>
+      <h1 class="reveal">One Platform. Every Logistics Service.<br><span class="hl">AI-Powered.</span></h1>
+      <p class="lp-sub reveal">Whether you handle Customs Clearance, FTL Transportation, Freight Forwarding, Air &amp; Ocean Freight, Warehousing, Container Tracking, or Last-Mile Delivery, Cargora brings every operation together with intelligent automation.</p>
+      <div class="lp-cta reveal">
+        <a class="btn btn-onblue" href="/contact/">Request a Demo <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="lp-pills reveal">
+        <span class="lp-pill"><b>Up to 40%</b> faster processing</span>
+        <span class="lp-pill"><b>Up to 50%</b> higher productivity</span>
+        <span class="lp-pill"><b>98%+</b> accuracy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="clients-sec">
+    <div class="wrap">
+      <div class="clients-label reveal">Loved by India's famous startups and world-renowned brands</div>
+      <div class="clients-row reveal">
+        <a class="client-logo" href="http://www.4slogistics.com/" target="_blank" rel="noopener"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/4s.png" alt="4S Logistic Solutions"></a>
+        <a class="client-logo" href="https://www.kssroadways.com/" target="_blank" rel="noopener"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/kss.png" alt="KSS Roadways"></a>
+        <div class="client-logo"><span style="font-family:var(--display);font-weight:800;font-size:28px;color:#6ccde3;letter-spacing:-.03em;">NTA</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEASURABLE BUSINESS IMPACT -->
+  <section class="section">
+    <div class="wrap">
+      <div class="rule-head reveal"><h2>Measurable Business Impact</h2></div>
+      <div class="impact-grid">
+        <div class="impact-card reveal" style="--c:#1a4bc5;--tint:#f2f6ff">
+          <div class="impact-head"><span class="impact-ico"><svg class="icon"><use href="#i-clock"/></svg></span><h3>Processing Turnaround Time (TAT)</h3></div>
+          <div class="up-label">Reduce turnaround time by</div>
+          <div class="impact-big"><span class="small">Up to</span><span class="huge"><span data-count="40">0</span>%</span><span class="small">Faster</span></div>
+          <div class="mini-bars"><span style="--h:100%"></span><span style="--h:70%"></span><span style="--h:44%"></span><span style="--h:24%"></span></div>
+          <div class="impact-note">Faster processing. Happier customers.</div>
+        </div>
+        <div class="impact-card reveal" style="--c:#10893e;--tint:#f2fbf5">
+          <div class="impact-head"><span class="impact-ico"><svg class="icon"><use href="#i-activity"/></svg></span><h3>Operational Productivity</h3></div>
+          <div class="up-label">Improve productivity by</div>
+          <div class="impact-big"><span class="small">Up to</span><span class="huge"><span data-count="50">0</span>%</span><span class="small">Higher</span></div>
+          <div class="mini-bars"><span style="--h:24%"></span><span style="--h:48%"></span><span style="--h:72%"></span><span style="--h:100%"></span></div>
+          <div class="impact-note">Do more with the same team.</div>
+        </div>
+        <div class="impact-card reveal" style="--c:#52259b;--tint:#f8f4ff">
+          <div class="impact-head"><span class="impact-ico"><svg class="icon"><use href="#i-dollar"/></svg></span><h3>Operational Cost &amp; Accuracy</h3></div>
+          <div class="up-label">Lower operational cost by</div>
+          <div class="impact-big"><span class="small">Up to</span><span class="huge"><span data-count="30">0</span>%</span><span class="small">Lower Cost</span></div>
+          <div class="impact-acc"><span class="accval"><span data-count="98">0</span>%+</span><span class="acclbl">Processing<br>Accuracy</span></div>
+          <div class="impact-note">Lower cost. Fewer errors. Better compliance.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY + MODULES -->
+  <section class="section" id="modules">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Solution Modules</span><h2>Built for Every Logistics Operation</h2><p>Cargora is one configurable AI engine that expands across your entire supply chain — live where it matters most today, and rolling out fast across every logistics service.</p></div>
+
+      <div class="avail">
+        <div class="avail-col reveal">
+          <div class="avail-tag live"><span class="pulse"></span> Available Today</div>
+          <div class="av-list">
+            <button type="button" class="mod2 live lp-openm">
+              <span class="m2-ic"><svg class="icon"><use href="#i-shield"/></svg></span>
+              <div class="m2-txt"><h4>Customs Clearance</h4><p>End-to-end AI clearance — from document collection to final submission.</p><span class="m2-more">See how it works <svg class="icon"><use href="#i-arrow"/></svg></span></div>
+              <span class="m2-badge live">Live</span>
+            </button>
+            <button type="button" class="mod2 live lp-openm">
+              <span class="m2-ic"><svg class="icon"><use href="#i-truck"/></svg></span>
+              <div class="m2-txt"><h4>Full Truck Load (FTL)</h4><p>Automated FTL operations, documentation &amp; tracking.</p><span class="m2-more">See how it works <svg class="icon"><use href="#i-arrow"/></svg></span></div>
+              <span class="m2-badge live">Live</span>
+            </button>
+            <a class="mod2 live" href="https://trackcontainer.in/" target="_blank" rel="noopener">
+              <span class="m2-ic"><svg class="icon"><use href="#i-pin2"/></svg></span>
+              <div class="m2-txt"><h4>TrackContainer</h4><p>Real-time container visibility &amp; tracking across carriers.</p><span class="m2-more">Visit product <svg class="icon"><use href="#i-arrow"/></svg></span></div>
+              <span class="m2-badge live">Live</span>
+            </a>
+          </div>
+        </div>
+        <div class="avail-col reveal">
+          <div class="avail-tag soon"><span class="pulse"></span> Coming Soon</div>
+          <div class="av-grid">
+            <div class="mod2"><span class="m2-ic"><svg class="icon"><use href="#i-layers"/></svg></span><div class="m2-txt"><h4>Less-than-Truck Load (LTL)</h4></div><span class="m2-badge soon">Soon</span></div>
+            <div class="mod2"><span class="m2-ic"><svg class="icon"><use href="#i-globe"/></svg></span><div class="m2-txt"><h4>Freight Forwarding</h4></div><span class="m2-badge soon">Soon</span></div>
+            <div class="mod2"><span class="m2-ic"><svg class="icon"><use href="#i-plane"/></svg></span><div class="m2-txt"><h4>Air Freight</h4></div><span class="m2-badge soon">Soon</span></div>
+            <div class="mod2"><span class="m2-ic"><svg class="icon"><use href="#i-ship"/></svg></span><div class="m2-txt"><h4>Ocean Freight</h4></div><span class="m2-badge soon">Soon</span></div>
+            <div class="mod2"><span class="m2-ic"><svg class="icon"><use href="#i-warehouse"/></svg></span><div class="m2-txt"><h4>Warehousing &amp; Inventory</h4></div><span class="m2-badge soon">Soon</span></div>
+            <div class="mod2"><span class="m2-ic"><svg class="icon"><use href="#i-flow"/></svg></span><div class="m2-txt"><h4>Last-mile &amp; 3PL</h4></div><span class="m2-badge soon">Soon</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lp-why reveal">
+        <div class="lp-why-l">
+          <h3>Why teams choose Cargora</h3>
+          <ul class="lp-check two">
+            <li><span class="ck"><svg class="icon"><use href="#i-check"/></svg></span>Works with your existing ERP, TMS, WMS &amp; Customs systems</li>
+            <li><span class="ck"><svg class="icon"><use href="#i-check"/></svg></span>Automates repetitive operational tasks</li>
+            <li><span class="ck"><svg class="icon"><use href="#i-check"/></svg></span>AI assistance for your operations teams</li>
+            <li><span class="ck"><svg class="icon"><use href="#i-check"/></svg></span>Reduces processing turnaround time (TAT)</li>
+            <li><span class="ck"><svg class="icon"><use href="#i-check"/></svg></span>Increases productivity &amp; lowers cost</li>
+            <li><span class="ck"><svg class="icon"><use href="#i-check"/></svg></span>Improves accuracy &amp; compliance</li>
+          </ul>
+        </div>
+        <div class="lp-why-r">
+          <div class="know-card">
+            <span class="know-ic"><svg class="icon"><use href="#i-compass"/></svg></span>
+            <h4>See it in action</h4>
+            <p>Watch how Cargora turns a fully manual customs-clearance workflow into an AI-driven operation — step by step.</p>
+            <button type="button" class="btn btn-primary know-btn" id="lpKnowBtn">Get to Know Cargora <svg class="icon"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTERPRISE PILLARS -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Platform</span><h2>Enterprise AI Platform</h2><p>Cargora continuously learns from your operations to automate repetitive tasks, provide real-time assistance, and help your teams make better decisions.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar-card reveal" style="--c1:#3c59e7;--c2:#4f46e5"><span class="pillar-ico"><svg class="icon"><use href="#i-bot"/></svg></span><h3>Intelligent Automation</h3><p>Automate routine operational processes with AI.</p></div>
+        <div class="pillar-card reveal" style="--c1:#a855f7;--c2:#ec4899"><span class="pillar-ico"><svg class="icon"><use href="#i-eye"/></svg></span><h3>Real-Time Visibility</h3><p>Monitor operations and receive actionable insights.</p></div>
+        <div class="pillar-card reveal" style="--c1:#10b981;--c2:#14b8a6"><span class="pillar-ico"><svg class="icon"><use href="#i-trend"/></svg></span><h3>Continuous Improvement</h3><p>AI learns and improves operational efficiency over time.</p></div>
+        <div class="pillar-card reveal" style="--c1:#f97316;--c2:#f59e0b"><span class="pillar-ico"><svg class="icon"><use href="#i-maximize"/></svg></span><h3>Enterprise Scale</h3><p>Deploy across multiple branches, teams, and business units.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="lp-cta-sec">
+    <div class="wrap">
+      <div class="lp-final reveal">
+        <div class="lf-l">
+          <h2>Automate More.<br>Process Faster.<br>Scale Smarter.</h2>
+          <p>Cargora is your AI partner for modern logistics operations — helping your business improve productivity, reduce costs, and scale efficiently while leveraging the systems you already have.</p>
+        </div>
+        <div class="lf-r">
+          <span class="kick">Ready to introduce Cargora to your operations?</span>
+          <a class="btn btn-onblue" href="/contact/">Book a Free Consultation <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOGICOPILOT DEEP-DIVE MODAL ===== -->
+  <div class="lp-modal" id="lpModal" role="dialog" aria-modal="true" aria-label="How Cargora transforms Customs Clearance">
+    <div class="lpm-backdrop" data-close></div>
+    <div class="lpm-panel">
+      <button class="lpm-close" type="button" data-close aria-label="Close"><svg class="icon"><use href="#i-plus"/></svg></button>
+      <div class="lpm-hero">
+        <div class="lpm-brand"><span class="lpm-mark"><svg class="icon"><use href="#i-compass"/></svg></span> Cargora <span class="lpm-tag">for Customs Clearing</span></div>
+        <h2>Stop Doing Clearance Operations <span class="hl">Manually.</span></h2>
+        <p>With Cargora, every shipment is AI-assisted — from document collection to final submission. Scroll through the full customs-clearance workflow below to see exactly what changes at every step.</p>
+      </div>
+
+      <div class="tx-table">
+        <div class="tx-hrow">
+          <div class="th proc">Current Process</div>
+          <div class="th man">The Manual Way</div>
+          <div class="th ai">With Cargora</div>
+          <div class="th imp">Business Impact</div>
+        </div>
+        <div class="tx-r">
+          <div class="tc proc"><span class="tc-num">01</span><span class="tc-ic"><svg class="icon"><use href="#i-file"/></svg></span><span class="tc-name">Receive Import Documents</span></div>
+          <div class="tc man"><p>Clerk receives BL, Invoice &amp; Packing List via WhatsApp/email and manually checks every file is present before starting.</p></div>
+          <div class="tc ai"><span class="ai-badge">AI</span><p>AI Document Checklist automatically verifies all mandatory documents are received &amp; complete before processing begins.</p></div>
+          <div class="tc imp"><svg class="icon"><use href="#i-check"/></svg><span>90% fewer missing-document follow-ups</span></div>
+        </div>
+        <div class="tx-r">
+          <div class="tc proc"><span class="tc-num">02</span><span class="tc-ic"><svg class="icon"><use href="#i-search"/></svg></span><span class="tc-name">Read &amp; Extract Document Data</span></div>
+          <div class="tc man"><p>Clerk reads each PDF page by page and types values — container number, gross weight, shipper — into the ERP field by field.</p></div>
+          <div class="tc ai"><span class="ai-badge">AI</span><p>AI Vision Extraction automatically reads and extracts every key field from the documents in seconds.</p></div>
+          <div class="tc imp"><svg class="icon"><use href="#i-check"/></svg><span>70% faster data reading with higher accuracy</span></div>
+        </div>
+        <div class="tx-r">
+          <div class="tc proc"><span class="tc-num">03</span><span class="tc-ic"><svg class="icon"><use href="#i-layers"/></svg></span><span class="tc-name">Cross-Document Verification</span></div>
+          <div class="tc man"><p>Clerk opens the BL, Commercial Invoice &amp; Packing List side by side and compares values one by one, by eye.</p></div>
+          <div class="tc ai"><span class="ai-badge">AI</span><p>AI Cross-Verification compares all linked fields across every document — and understands that 1.5 MT = 1500 KGS.</p></div>
+          <div class="tc imp"><svg class="icon"><use href="#i-check"/></svg><span>Zero missed discrepancies · 100% audit-ready</span></div>
+        </div>
+        <div class="tx-r">
+          <div class="tc proc"><span class="tc-num">04</span><span class="tc-ic"><svg class="icon"><use href="#i-file"/></svg></span><span class="tc-name">Bill of Entry Preparation</span></div>
+          <div class="tc man"><p>Clerk manually fills each BOE field, copying values from separate documents — prone to copy errors &amp; missing fields.</p></div>
+          <div class="tc ai"><span class="ai-badge">AI</span><p>AI BOE Preparation extracts verified data and auto-fills the Bill of Entry, ready for review.</p></div>
+          <div class="tc imp"><svg class="icon"><use href="#i-check"/></svg><span>70% faster BOE filing with higher accuracy</span></div>
+        </div>
+        <div class="tx-r">
+          <div class="tc proc"><span class="tc-num">05</span><span class="tc-ic"><svg class="icon"><use href="#i-database"/></svg></span><span class="tc-name">IGM &amp; Inward Data Matching</span></div>
+          <div class="tc man"><p>Clerk logs into ICEGATE, searches the IGM number, then copies the IGM &amp; inward dates back to match the shipment.</p></div>
+          <div class="tc ai"><span class="ai-badge">AI</span><p>Fetch ICEGATE — one click pulls the IGM number, inward date &amp; port data directly from ICEGATE and matches it.</p></div>
+          <div class="tc imp"><svg class="icon"><use href="#i-check"/></svg><span>Zero manual portal searches · instant matching</span></div>
+        </div>
+        <div class="tx-r">
+          <div class="tc proc"><span class="tc-num">06</span><span class="tc-ic"><svg class="icon"><use href="#i-flow"/></svg></span><span class="tc-name">Format &amp; Date Conversion</span></div>
+          <div class="tc man"><p>Clerk reformats dates (DD/MM/YYYY → YYYY/MM/DD) and converts units (MT → KGS) by hand for portal submission.</p></div>
+          <div class="tc ai"><span class="ai-badge">AI</span><p>AI Data Transformation applies pre-configured format &amp; unit-conversion rules automatically on every extraction.</p></div>
+          <div class="tc imp"><svg class="icon"><use href="#i-check"/></svg><span>100% format compliance · zero portal rejections</span></div>
+        </div>
+        <div class="tx-r">
+          <div class="tc proc"><span class="tc-num">07</span><span class="tc-ic"><svg class="icon"><use href="#i-activity"/></svg></span><span class="tc-name">Repeated Extraction Errors</span></div>
+          <div class="tc man"><p>The same extraction mistake repeats on every similar document, and the clerk must correct it every single time.</p></div>
+          <div class="tc ai"><span class="ai-badge">AI</span><p>AI Training Loop — the clerk corrects it once, and Cargora remembers it permanently for every future document.</p></div>
+          <div class="tc imp"><svg class="icon"><use href="#i-check"/></svg><span>The same error never happens twice</span></div>
+        </div>
+        <div class="tx-r">
+          <div class="tc proc"><span class="tc-num">08</span><span class="tc-ic"><svg class="icon"><use href="#i-linechart"/></svg></span><span class="tc-name">Management Reporting &amp; Review</span></div>
+          <div class="tc man"><p>Manager copies figures into Excel and compiles a weekly summary report that takes several hours to prepare.</p></div>
+          <div class="tc ai"><span class="ai-badge">AI</span><p>AI Dashboard shows real-time insights — TAT per shipment, cost per entry, team performance &amp; exception alerts.</p></div>
+          <div class="tc imp"><svg class="icon"><use href="#i-check"/></svg><span>Better decisions · hours of reporting saved</span></div>
+        </div>
+        <div class="tx-r">
+          <div class="tc proc"><span class="tc-num">09</span><span class="tc-ic"><svg class="icon"><use href="#i-bot"/></svg></span><span class="tc-name">ERP &amp; Portal Data Entry</span></div>
+          <div class="tc man"><p>Clerk types each value into the ERP/portal field by field — 1–3 hours of typing that is highly prone to typos.</p></div>
+          <div class="tc ai"><span class="ai-badge">AI</span><p>Cargora RPA reads all extracted values and fills every ERP/portal field instantly — no manual typing.</p></div>
+          <div class="tc imp"><svg class="icon"><use href="#i-check"/></svg><span>80% less data-entry time · zero typo errors</span></div>
+        </div>
+        <div class="tx-r">
+          <div class="tc proc"><span class="tc-num">10</span><span class="tc-ic"><svg class="icon"><use href="#i-check"/></svg></span><span class="tc-name">Submission &amp; Confirmation</span></div>
+          <div class="tc man"><p>Staff watches the screen during submission and manually records the result in a register to track completion.</p></div>
+          <div class="tc ai"><span class="ai-badge">AI</span><p>A headless background bot submits on the server while the operator is free — with an instant success / error alert.</p></div>
+          <div class="tc imp"><svg class="icon"><use href="#i-check"/></svg><span>Operator walks away · notified automatically when done</span></div>
+        </div>
+      </div>
+
+      <div class="lpm-flow"><span>Faster Clearance</span><svg class="icon"><use href="#i-arrow"/></svg><span>Lower Cost</span><svg class="icon"><use href="#i-arrow"/></svg><span>Happier Customers</span></div>
+
+      <div class="lpm-benefits">
+        <div class="ben-card" style="--bc:#1a4bc5;--bt:#eef3ff"><div class="ben-h"><span class="ben-ic"><svg class="icon"><use href="#i-clock"/></svg></span>Save Time</div><ul><li>AI Document Verification</li><li>AI Data Extraction</li><li>AI BOE Preparation</li><li>AI Compliance Validation</li></ul><div class="ben-stat">Save 2–3 hours per shipment</div></div>
+        <div class="ben-card" style="--bc:#10893e;--bt:#eefbf3"><div class="ben-h"><span class="ben-ic"><svg class="icon"><use href="#i-activity"/></svg></span>Improve Productivity</div><ul><li>Reduce repetitive work</li><li>Handle more shipments</li><li>Automatic task allocation</li><li>AI Operations Assistant</li></ul><div class="ben-stat">Up to 50% higher productivity</div></div>
+        <div class="ben-card" style="--bc:#52259b;--bt:#f6f2ff"><div class="ben-h"><span class="ben-ic"><svg class="icon"><use href="#i-dollar"/></svg></span>Reduce Cost</div><ul><li>Less manpower needed</li><li>Fewer documentation errors</li><li>Reduced customs delays</li><li>Lower storage charges</li></ul><div class="ben-stat">Up to 30% lower operational cost</div></div>
+        <div class="ben-card" style="--bc:#0e7490;--bt:#ecfbff"><div class="ben-h"><span class="ben-ic"><svg class="icon"><use href="#i-eye"/></svg></span>Real-Time Visibility</div><ul><li>Shipment Dashboard</li><li>Exception Alerts</li><li>ICEGATE Data Fetch</li><li>TAT Analytics &amp; ERP Integration</li></ul><div class="ben-stat">Full visibility across the lifecycle</div></div>
+      </div>
+
+      <div class="lpm-foot">
+        <div class="lpm-foot-l"><b>One AI platform for complete customs operations.</b><span>Automate More · Process Faster · Scale Smarter.</span></div>
+        <a class="btn btn-primary" href="/contact/" data-close>Request a Demo <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var b=document.getElementById('lpKnowBtn'),m=document.getElementById('lpModal');
+    if(!b||!m)return;
+    function op(){m.classList.add('open');document.documentElement.style.overflow='hidden';}
+    function cl(){m.classList.remove('open');document.documentElement.style.overflow='';}
+    b.addEventListener('click',op);
+    Array.prototype.forEach.call(document.querySelectorAll('.lp-openm'),function(el){el.addEventListener('click',op);});
+    m.addEventListener('click',function(e){if(e.target.closest('[data-close]'))cl();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))cl();});
+  })();
+  </script>
+</main>
+
+<?php get_footer(); ?>

@@ -1,0 +1,90 @@
+<?php /* Template Name: WB — Our Story */ get_header(); ?>
+<main id="top">
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="wrap inner">
+      <span class="eyebrow">Who we are</span>
+      <h1>Our Story</h1>
+      <p>Building the future of business automation, one AI solution at a time.</p>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Leadership</span><h2>About the Founder</h2></div>
+      <div class="founder">
+        <div class="founder-card reveal">
+          <div class="founder-photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/founder.jpg" alt="Senthil Pitchai — Founder & CEO"></div>
+          <h3>Senthil Pitchai</h3>
+          <div class="role">Founder &amp; CEO</div>
+          <div class="founder-badge"><svg class="icon"><use href="#i-award"/></svg> 20+ years in enterprise architecture</div>
+        </div>
+        <div class="founder-bio reveal">
+          <p>Axiora Labs was founded by <b>Senthil Pitchai</b>, an Enterprise Solution Architect with over <b>20 years of experience</b> building large-scale enterprise systems.</p>
+          <p>After years of designing high-performance architectures for enterprises, Senthil noticed something surprising — while technology was advancing rapidly, many business operations were still manual, repetitive, and inefficient.</p>
+          <div class="founder-quote"><p>"AI is not the future. It is the next necessary shift in how businesses operate."</p></div>
+          <p>In <b>August 2025</b>, he transformed that belief into action and founded Axiora Labs — with a mission to automate real-world business workflows using enterprise-grade architecture and intelligent systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Milestones</span><h2>Our Journey</h2><p>Key milestones that have shaped Axiora Labs.</p></div>
+      <div class="journey">
+        <div class="jitem reveal"><span class="jdot"></span><div class="jcard"><span class="jdate">August 2025</span><h3>Axiora Labs Founded</h3><p>Business Work, Rebuilt with Human + AI. Thoughtfully designed AI products that support people, simplify operations, and make everyday business work better.</p></div></div>
+        <div class="jitem reveal"><span class="jdot"></span><div class="jcard"><span class="jdate">October 2025</span><h3>BoostEntry AI — KSS Roadways</h3><p>BoostEntry AI was implemented at KSS Roadways to intelligently extract data from image and PDF invoices &amp; PODs, automate validation and ERP updates, and significantly streamline billing operations.</p><a class="jlink" href="https://boostentryai.com/" target="_blank" rel="noopener"><svg class="icon"><use href="#i-arrow"/></svg> boostentryai.com</a></div></div>
+        <div class="jitem reveal"><span class="jdot"></span><div class="jcard"><span class="jdate">January 2026</span><h3>Container Tracking System — 4S Logistics</h3><p>Automated container movement tracking and operational visibility platform for logistics workflow optimization.</p><a class="jlink" href="https://trackcontainer.in" target="_blank" rel="noopener"><svg class="icon"><use href="#i-arrow"/></svg> trackcontainer.in</a></div></div>
+        <div class="jitem reveal"><span class="jdot"></span><div class="jcard"><span class="jdate">February 2026</span><h3>CustomsFlow AI — 4S Logistics</h3><p>AI-powered customs clearance and workflow automation platform connecting brokers, operations teams, and customers in one intelligent system.</p><a class="jlink" href="https://beta.customsflowai.in" target="_blank" rel="noopener"><svg class="icon"><use href="#i-arrow"/></svg> beta.customsflowai.in</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Our people</span><h2>Meet the Team</h2><p>The passionate people behind Axiora Labs.</p></div>
+      <div class="team-frame reveal"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/team.jpg" alt="Axiora Labs Team"></div>
+      <p class="team-cap reveal">The Axiora Labs team at our office.</p>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">What drives us</span><h2>Our Core Values</h2><p>The principles that guide everything we do.</p></div>
+      <div class="values-grid">
+        <div class="val-card reveal" style="--c1:#f59e0b;--c2:#f97316"><div class="val-ico"><svg class="icon"><use href="#i-bulb"/></svg></div><h3>Innovation First</h3><p>We believe in pushing boundaries and creating cutting-edge AI solutions that transform businesses.</p></div>
+        <div class="val-card reveal" style="--c1:#3c59e7;--c2:#22d3ee"><div class="val-ico"><svg class="icon"><use href="#i-target"/></svg></div><h3>Customer Success</h3><p>Your success is our success. We're committed to delivering measurable ROI from day one.</p></div>
+        <div class="val-card reveal" style="--c1:#a855f7;--c2:#ec4899"><div class="val-ico"><svg class="icon"><use href="#i-users"/></svg></div><h3>Partnership Approach</h3><p>We don't just build solutions — we partner with you to understand your unique challenges.</p></div>
+        <div class="val-card reveal" style="--c1:#10b981;--c2:#34d399"><div class="val-ico"><svg class="icon"><use href="#i-trend"/></svg></div><h3>Continuous Improvement</h3><p>Technology evolves, and so do we. We're always learning and improving our solutions.</p></div>
+        <div class="val-card reveal" style="--c1:#ef4444;--c2:#f43f5e"><div class="val-ico"><svg class="icon"><use href="#i-award"/></svg></div><h3>Quality &amp; Accuracy</h3><p>We maintain the highest standards in everything we deliver — no compromises.</p></div>
+        <div class="val-card reveal" style="--c1:#6366f1;--c2:#8b5cf6"><div class="val-ico"><svg class="icon"><use href="#i-heart"/></svg></div><h3>Passion for Impact</h3><p>We're driven by the positive impact our solutions have on businesses and their teams.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="section">
+    <div class="wrap">
+      <div class="mv-grid">
+        <div class="mv-card reveal" style="--c1:#3c59e7;--c2:#22d3ee"><div class="mv-ico"><svg class="icon"><use href="#i-target"/></svg></div><h2>Our Mission</h2><p>To empower businesses with intelligent AI automation that eliminates repetitive work, reduces operational costs, and enables teams to focus on strategic, high-value activities that drive growth.</p></div>
+        <div class="mv-card reveal" style="--c1:#a855f7;--c2:#ec4899"><div class="mv-ico"><svg class="icon"><use href="#i-rocket"/></svg></div><h2>Our Vision</h2><p>To become the leading enterprise AI automation partner, transforming how businesses operate worldwide through innovative, reliable, and result-driven AI solutions that deliver measurable ROI from day one.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap cta-inner reveal">
+      <h2>Ready to Transform Your Business?</h2>
+      <p>Join the businesses that trust Axiora Labs to automate their operations and drive growth.</p>
+      <div class="cta-btns"><a class="btn btn-white" href="/contact/">Get Started Today <svg class="icon"><use href="#i-arrow"/></svg></a><a class="btn btn-white-ghost" href="/ai-consulting/">Explore Solutions</a></div>
+    </div>
+  </section>
+</main>
+
+<?php get_footer(); ?>

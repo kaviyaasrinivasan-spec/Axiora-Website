@@ -1,0 +1,65 @@
+  /* ===== CAREERS PAGE ===== */
+  .page-hero{position:relative;overflow:hidden;padding:70px 0 54px;text-align:center;background:
+    radial-gradient(60% 60% at 50% -10%,rgba(60,89,231,.10),transparent 70%),
+    radial-gradient(40% 40% at 92% 8%,rgba(107,124,239,.10),transparent 70%),var(--bg);}
+  .page-hero::before{content:"";position:absolute;inset:0;background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:52px 52px;mask-image:radial-gradient(circle at 50% 15%,#000,transparent 70%);
+    -webkit-mask-image:radial-gradient(circle at 50% 15%,#000,transparent 70%);opacity:.5;}
+  .page-hero .inner{position:relative;z-index:2;max-width:740px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px;}
+  .page-hero h1{font-size:clamp(34px,5.2vw,58px);font-weight:800;letter-spacing:-.035em;}
+  .page-hero h1 .grad{background:linear-gradient(100deg,var(--brand),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .page-hero .inner p{font-size:clamp(16px,1.8vw,19px);color:var(--muted);max-width:600px;}
+
+  /* perks */
+  .perks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1080px;margin:0 auto;}
+  .perk-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 24px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:14px;transition:transform .4s cubic-bezier(.22,.61,.36,1),box-shadow .4s,border-color .4s;}
+  .perk-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent;}
+  .perk-ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 12px 22px -10px var(--c1);transition:transform .4s cubic-bezier(.22,.61,.36,1);}
+  .perk-card:hover .perk-ico{transform:scale(1.1) rotate(-6deg);}
+  .perk-ico .icon{width:25px;height:25px;}
+  .perk-card h3{font-size:17px;}
+  .perk-card p{font-size:13.5px;color:var(--body);line-height:1.6;}
+
+  /* open positions */
+  .jobs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1000px;margin:0 auto;}
+  .job-card{display:flex;align-items:center;gap:18px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow-sm);transition:transform .4s cubic-bezier(.22,.61,.36,1),box-shadow .4s,border-color .4s;}
+  .job-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--brand);}
+  .job-ico{width:56px;height:56px;border-radius:15px;background:var(--bg-tint);color:var(--brand);display:grid;place-items:center;flex:none;transition:background .3s,color .3s,transform .4s cubic-bezier(.22,.61,.36,1);}
+  .job-card:hover .job-ico{background:var(--brand);color:#fff;transform:scale(1.06);}
+  .job-ico .icon{width:26px;height:26px;}
+  .job-info{flex:1;}
+  .job-info h3{font-size:18px;margin-bottom:4px;}
+  .job-info .job-meta{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:11.5px;color:var(--muted);margin-bottom:8px;}
+  .job-info .job-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--line-strong);}
+  .job-info p{font-size:13px;color:var(--body);line-height:1.55;}
+  .job-apply{flex:none;background:none;border:1.5px solid var(--line-strong);color:var(--ink);font-family:var(--display);font-weight:600;font-size:13px;padding:10px 18px;border-radius:100px;cursor:pointer;transition:.25s;display:inline-flex;align-items:center;gap:7px;}
+  .job-apply:hover{background:var(--brand);color:#fff;border-color:var(--brand);transform:translateY(-2px);}
+  .job-apply .icon{width:14px;height:14px;}
+
+  /* apply form */
+  .apply-wrap{max-width:620px;margin:0 auto;}
+  .form-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:20px;padding:36px;box-shadow:var(--shadow-md);}
+  .form-grid{display:flex;flex-direction:column;gap:18px;}
+  .field{display:flex;flex-direction:column;gap:7px;}
+  .field label{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#5a6382;}
+  .field label .req{color:var(--red);}
+  .field input,.field select{width:100%;border:1.5px solid var(--line-strong);border-radius:11px;padding:13px 14px;font-family:var(--sans);font-size:14.5px;color:var(--ink);background:#fff;transition:border-color .2s ease,box-shadow .2s ease;}
+  .field input::placeholder{color:#aab2c8;}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px rgba(60,89,231,.12);}
+  .field select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:40px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%236b7490' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 6 8 10 12 6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 14px center;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .file-field{border:1.5px dashed var(--line-strong);border-radius:12px;padding:16px;display:flex;align-items:center;gap:14px;transition:border-color .2s,background .2s;}
+  .file-field:hover{border-color:var(--brand);background:var(--bg-soft);}
+  .file-field .ff-ico{width:42px;height:42px;border-radius:11px;background:var(--bg-tint);color:var(--brand);display:grid;place-items:center;flex:none;}
+  .file-field .ff-ico .icon{width:20px;height:20px;}
+  .file-field input[type=file]{border:none;padding:0;font-size:13px;color:var(--muted);background:none;}
+  .file-field input[type=file]::file-selector-button{margin-right:12px;border:none;background:var(--brand);color:#fff;font-family:var(--display);font-weight:600;font-size:12.5px;padding:8px 14px;border-radius:8px;cursor:pointer;transition:background .2s;}
+  .file-field input[type=file]::file-selector-button:hover{background:var(--brand-dark);}
+  .file-note{font-size:11.5px;color:var(--muted);margin-top:6px;}
+  .form-card .btn{width:100%;margin-top:4px;}
+
+  @media(max-width:900px){.perks-grid{grid-template-columns:1fr 1fr;} .jobs-grid{grid-template-columns:1fr;}}
+  @media(max-width:520px){.perks-grid{grid-template-columns:1fr;} .field-row{grid-template-columns:1fr;} .job-card{flex-wrap:wrap;} .form-card{padding:26px 22px;}}
