@@ -1,7 +1,7 @@
 <?php
 if(!defined('ABSPATH'))exit;
 function wb_assets(){
-  $u=get_template_directory_uri(); $v='1.1.9';
+  $u=get_template_directory_uri(); $v='1.2.0';
   if(is_page_template('template-audit.php')){
     wp_enqueue_style('wb-audit',$u.'/assets/css/audit.css',array(),$v);
     return;

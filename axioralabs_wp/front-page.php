@@ -13,20 +13,25 @@
           <a class="btn btn-ghost" href="/ai-consulting/">Explore Our Solutions</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-show" id="heroShow">
-          <div class="hs-track" id="hsTrack">
-            <a class="hs-slide" href="/cargora/" draggable="false"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-logi.jpg" alt="Cargora — AI Operations Copilot for Logistics" draggable="false"></a>
-            <a class="hs-slide" href="https://trackcontainer.in/" target="_blank" rel="noopener" draggable="false"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-track.jpg" alt="TrackContainer — Real-time container tracking" draggable="false"></a>
-            <a class="hs-slide" href="https://iclinical.ai/" target="_blank" rel="noopener" draggable="false"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-iclin.jpg" alt="iClinicalAI — Clinical trial platform" draggable="false"></a>
-            <a class="hs-slide" href="https://meetingclosure.axioralabs.ai/" target="_blank" rel="noopener" draggable="false"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-meet.jpg" alt="MeetingClosure — AI meeting notes & follow-ups" draggable="false"></a>
-          </div>
-          <div class="hs-nav" id="hsNav">
-            <button type="button" class="on" aria-label="Cargora"></button>
-            <button type="button" aria-label="TrackContainer"></button>
-            <button type="button" aria-label="iClinicalAI"></button>
-            <button type="button" aria-label="MeetingClosure"></button>
-          </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT SHOWCASE ===== -->
+  <section class="prod-showcase">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="eyebrow">Our AI Products</span><h2>Production-Ready AI, Built for Real-World Business</h2><p>Four products already live and working — swipe through them.</p></div>
+      <div class="hero-show" id="heroShow">
+        <div class="hs-track" id="hsTrack">
+          <a class="hs-slide" href="/cargora/" draggable="false"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-logi.jpg" alt="Cargora — AI Operations Copilot for Logistics" draggable="false"></a>
+          <a class="hs-slide" href="https://trackcontainer.in/" target="_blank" rel="noopener" draggable="false"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-track.jpg" alt="TrackContainer — Real-time container tracking" draggable="false"></a>
+          <a class="hs-slide" href="https://iclinical.ai/" target="_blank" rel="noopener" draggable="false"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-iclin.jpg" alt="iClinicalAI — Clinical trial platform" draggable="false"></a>
+          <a class="hs-slide" href="https://meetingclosure.axioralabs.ai/" target="_blank" rel="noopener" draggable="false"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-meet.jpg" alt="MeetingClosure — AI meeting notes & follow-ups" draggable="false"></a>
+        </div>
+        <div class="hs-nav" id="hsNav">
+          <button type="button" class="on" aria-label="Cargora"></button>
+          <button type="button" aria-label="TrackContainer"></button>
+          <button type="button" aria-label="iClinicalAI"></button>
+          <button type="button" aria-label="MeetingClosure"></button>
         </div>
       </div>
     </div>

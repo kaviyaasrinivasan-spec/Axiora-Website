@@ -4,7 +4,7 @@ $src="C:/Users/abcom/Desktop/office/Workboosterai_WP/source/Hero_imgs"
 $out="C:/Users/abcom/AppData/Local/Temp/claude/c--Users-abcom-Desktop-office-Workboosterai-WP/5e76d591-982f-4e41-80d6-ad9501c72cba/scratchpad"
 $enc=[System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Object {$_.MimeType -eq 'image/jpeg'}
 function QP($q){ $p=New-Object System.Drawing.Imaging.EncoderParameters 1; $p.Param[0]=New-Object System.Drawing.Imaging.EncoderParameter ([System.Drawing.Imaging.Encoder]::Quality),([long]$q); return $p }
-$map=@{ "Logicopilot_hero.jpeg"="hero-logi"; "Trackcontainer_hero.jpeg"="hero-track"; "Iclinical_hero.jpeg"="hero-iclin"; "Meetingclosure_hero.jpeg"="hero-meet" }
+$map=@{ "Cargora_hero.png"="hero-logi"; "Trackcontainer_hero.jpeg"="hero-track"; "Iclinical_hero.jpeg"="hero-iclin"; "Meetingclosure_hero.jpeg"="hero-meet" }
 function Make($w,$q,$suffix){
   foreach($k in $map.Keys){
     $o=New-Object System.Drawing.Bitmap (Join-Path $src $k)
@@ -20,4 +20,4 @@ function Make($w,$q,$suffix){
   }
 }
 Write-Host "== FULL (theme) =="; Make 1536 92 ""
-Write-Host "== PREVIEW base64 =="; Make 1200 88 "-pv"
+Write-Host "== PREVIEW base64 =="; Make 1440 85 "-pv"
