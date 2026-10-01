@@ -8,7 +8,7 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top:20px">
+  <section class="section" id="book" style="padding-top:20px">
     <div class="wrap">
       <div class="contact-grid">
         <!-- FORM -->
@@ -17,39 +17,85 @@
             <h2>Book Your Free AI Automation Audit</h2>
             <p>Automate repetitive tasks, reduce manual work, and save hours every week.</p>
           </div>
-          <form class="form-grid" onsubmit="return false">
-            <div class="field">
-              <label>Full Name <span class="req">*</span></label>
-              <input type="text" name="fullName" placeholder="e.g. Rahul Sharma" required>
+          <?php
+            $wb_notice = wb_lead_notice();
+            $wb_cls    = $wb_notice ? ($wb_notice['ok'] ? ' is-ok' : ' is-err') : '';
+            $wb_opts   = wb_lead_choices();
+          ?>
+          <?php /* novalidate: the browser's own bubble is unstyled and easy to miss —
+                   contact.js shows the message inline instead, in the same slot the
+                   server's notice uses. */ ?>
+          <form class="form-grid<?php echo esc_attr($wb_cls); ?>" method="post" novalidate
+                action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+            <input type="hidden" name="action" value="wb_lead">
+            <?php wp_nonce_field('wb_lead','wb_nonce'); ?>
+            <?php /* Honeypot. Deliberately NOT named "website"/"url"/"company" and so on:
+                     Chrome's autofill recognises those and would fill it for a real person,
+                     whose enquiry would then be silently dropped as a bot. autocomplete=off
+                     alone is not enough — Chrome ignores it on recognised field names. */ ?>
+            <div class="form-hp" aria-hidden="true">
+              <label for="wb-lead-hp">Leave this field empty</label>
+              <input id="wb-lead-hp" type="text" name="wb_hp_leaveblank" tabindex="-1" autocomplete="off">
             </div>
             <div class="field">
-              <label>Company Name <span class="req">*</span></label>
-              <input type="text" name="companyName" placeholder="e.g. Acme Tech Solutions" required>
+              <label for="wb-lead-name">Full Name <span class="req">*</span></label>
+              <input id="wb-lead-name" type="text" name="fullName" placeholder="e.g. Rahul Sharma" autocomplete="name" required>
             </div>
             <div class="field">
-              <label>Mobile Number <span class="req">*</span></label>
-              <div class="phone-wrap"><span class="pfx">+91</span><input type="tel" name="mobileNumber" placeholder="9876543210" maxlength="10"></div>
+              <label for="wb-lead-company">Company Name <span class="req">*</span></label>
+              <input id="wb-lead-company" type="text" name="companyName" placeholder="e.g. Acme Tech Solutions" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="wb-lead-email">Email Address <span class="req">*</span></label>
+              <input id="wb-lead-email" type="email" name="email" placeholder="e.g. rahul@acmetech.com" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="wb-lead-mobile">Mobile Number <span class="req">*</span></label>
+              <?php /* No maxlength: it would truncate a pasted "+91 98765 43210" to ten
+                       characters before the digits could be normalised, silently dropping
+                       real digits. contact.js strips to ten digits instead. */ ?>
+              <div class="phone-wrap"><span class="pfx">+91</span><input id="wb-lead-mobile" type="tel" name="mobileNumber" placeholder="9876543210" inputmode="numeric" autocomplete="tel-national" required></div>
             </div>
             <div class="field-row">
               <div class="field">
-                <label>Number of Employees <span class="req">*</span></label>
-                <select name="employeeCount"><option value="" disabled selected>Select range</option><option>1–10</option><option>11–25</option><option>26–50</option><option>51–100</option><option>100+</option></select>
+                <label for="wb-lead-emp">Number of Employees <span class="req">*</span></label>
+                <select id="wb-lead-emp" name="employeeCount" required>
+                  <option value="" disabled selected>Select range</option>
+                  <?php foreach($wb_opts['employeeCount'] as $v=>$l): ?>
+                    <option value="<?php echo esc_attr($v); ?>"><?php echo esc_html($l); ?></option>
+                  <?php endforeach; ?>
+                </select>
               </div>
               <div class="field">
-                <label>Implementation Timeline <span class="req">*</span></label>
-                <select name="timeline"><option value="" disabled selected>Select option</option><option>Immediately</option><option>Within 1 Month</option><option>Within 3 Months</option><option>Just Exploring</option></select>
+                <label for="wb-lead-timeline">Implementation Timeline <span class="req">*</span></label>
+                <select id="wb-lead-timeline" name="timeline" required>
+                  <option value="" disabled selected>Select option</option>
+                  <?php foreach($wb_opts['timeline'] as $v=>$l): ?>
+                    <option value="<?php echo esc_attr($v); ?>"><?php echo esc_html($l); ?></option>
+                  <?php endforeach; ?>
+                </select>
               </div>
             </div>
             <div class="field">
-              <label>Biggest Repetitive Process <span class="req">*</span></label>
-              <select name="repetitiveProcess"><option value="" disabled selected>Select process</option><option>Data Entry</option><option>Customer Follow-ups</option><option>Service Verification</option><option>Invoice Processing</option><option>Report Generation</option><option>Approval Workflow</option><option>Document Verification</option><option>Other</option></select>
+              <label for="wb-lead-process">Biggest Repetitive Process <span class="req">*</span></label>
+              <select id="wb-lead-process" name="repetitiveProcess" required>
+                <option value="" disabled selected>Select process</option>
+                <?php foreach($wb_opts['repetitiveProcess'] as $v=>$l): ?>
+                  <option value="<?php echo esc_attr($v); ?>"><?php echo esc_html($l); ?></option>
+                <?php endforeach; ?>
+              </select>
             </div>
             <div class="field">
-              <label>Tell us about your automation needs (Optional)</label>
-              <textarea name="processDescription" placeholder="Tell us about the repetitive tasks or bottlenecks you want to solve…"></textarea>
+              <label for="wb-lead-notes">Tell us about your automation needs (Optional)</label>
+              <textarea id="wb-lead-notes" name="processDescription" placeholder="Tell us about the repetitive tasks or bottlenecks you want to solve…"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Book A Call <svg class="icon"><use href="#i-arrow"/></svg></button>
-            <div class="form-note"><svg class="icon"><use href="#i-check"/></svg> We reply within 24 business hours. No spam, ever.</div>
+            <?php /* One slot for both lines: the reassurance is swapped for the result, so
+                     the button never moves when a message appears. */ ?>
+            <div class="form-foot">
+              <p class="form-msg" role="status" aria-live="polite"><?php echo $wb_notice ? esc_html($wb_notice['text']) : ''; ?></p>
+              <div class="form-note"><svg class="icon"><use href="#i-check"/></svg> We reply within 24 business hours. No spam, ever.</div>
+            </div>
           </form>
         </div>
 

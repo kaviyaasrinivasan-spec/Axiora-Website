@@ -1,0 +1,118 @@
+<p class="lede">Most organisations do not have an automation problem. They have a prioritisation problem. There are dozens of processes that could be automated, a handful that should be, and usually two or three where the payback is large enough to be obvious once you look properly. This is a practical method for finding those, without a consultant and without a six-week discovery phase.</p>
+
+<p>The exercise below is the one we run at the start of an engagement. It takes a focused week, needs no technology decisions, and produces a ranked list you can act on. It works because it deliberately ignores what is technically interesting and concentrates on what is expensive.</p>
+
+<h2>Why the obvious candidates are usually the wrong ones</h2>
+
+<p>Ask a leadership team where AI should be applied and the answers tend to cluster around the most visible parts of the business — customer-facing chat, sales forecasting, executive dashboards. These are appealing because they are strategic and demonstrable. They are also, usually, poor first projects.</p>
+
+<p>Visible processes tend to be judgement-heavy, politically sensitive, and hard to measure. Success is contested, failure is public, and the baseline is often nobody's clear responsibility. They are excellent second or third projects, once an organisation has built the muscle for delivering AI systems into production.</p>
+
+<p>The best first candidates are almost always internal, unglamorous and high-frequency. Nobody puts them on a strategy slide. They are where the money is.</p>
+
+<h2>A four-question filter</h2>
+
+<p>For any candidate process, four questions determine whether automation is likely to pay. A process needs a strong answer on all four, not three.</p>
+
+<h3>1. How often does it happen?</h3>
+
+<p>Frequency compounds everything. A task that takes twenty minutes and happens twice a year is not worth automating no matter how tedious it is. The same task performed forty times a day is a different proposition entirely.</p>
+
+<p>Be sceptical of estimates here — people routinely misjudge frequency by an order of magnitude in both directions. Where possible, count. Ticket systems, email folders, shared drives and ERP logs will tell you the real number faster than a workshop will.</p>
+
+<h3>2. How much does it vary?</h3>
+
+<p>Variation is what separates a rules engine from an AI problem, and what separates a tractable AI problem from a research project.</p>
+
+<p>If every input has the same structure and the rules never change, you do not need AI — you need a script, and it will be cheaper and more reliable. If inputs vary in format but the underlying task is stable — reading invoices that arrive in forty different layouts, classifying complaints written in free text — that is precisely where modern AI earns its cost. If the task itself changes constantly and depends on context nobody has written down, automation will fight the business rather than serve it.</p>
+
+<h3>3. What does a mistake cost?</h3>
+
+<p>This determines the shape of the solution far more than the technology does. Three broad bands:</p>
+
+<ul>
+	<li><strong>Low cost, easily reversed.</strong> Mis-routed tickets, mis-tagged documents, a summary that misses a point. Suitable for full automation with sampling-based review.</li>
+	<li><strong>Meaningful cost, recoverable.</strong> Incorrect invoice coding, a wrong delivery ETA quoted to a customer. Suitable for automation with confidence thresholds — the system handles the clear cases and routes the uncertain ones to a person.</li>
+	<li><strong>High cost or irreversible.</strong> Clinical, legal, regulatory or financial decisions with external consequences. These are assistance problems, not automation problems. The system prepares, evidences and recommends; a person decides and is accountable.</li>
+</ul>
+
+<p>Most failed projects we see chose the wrong band — usually attempting full automation on a process that needed a human decision at the end.</p>
+
+<h3>4. Does the data already exist, in a system, without a person touching it?</h3>
+
+<p>This is the question that eliminates the most candidates, and the one most often answered optimistically. "We have that data" frequently means someone can produce it by exporting three reports and reconciling them in Excel.</p>
+
+<p>If the inputs are not already flowing through a system the automation can read, you have two projects, not one — and the data project is usually the larger and less exciting of the two. That may still be worth doing. It should not be discovered halfway through.</p>
+
+<h2>Where to look: five reliable signals</h2>
+
+<p>Rather than auditing the org chart, look for these patterns. In our experience they surface the highest-value candidates faster than any formal process-mapping exercise.</p>
+
+<h3>Anywhere a person retypes something</h3>
+
+<p>Re-keying data from one system into another, from a PDF into a form, from an email into a spreadsheet. This is pure transfer cost with no judgement attached, it happens constantly, and it is usually invisible because it is embedded in someone's day rather than tracked as a task.</p>
+
+<h3>Anywhere a spreadsheet sits between two systems</h3>
+
+<p>The shadow spreadsheet is the single most reliable indicator of an automation opportunity in an enterprise. It exists because two systems that should talk to each other do not, and a person has been quietly bridging the gap — often for years, often without anyone senior knowing the dependency exists.</p>
+
+<p>These spreadsheets also carry real operational risk. Finding them is worth the exercise on its own.</p>
+
+<h3>Anywhere the answer is "let me check and come back to you"</h3>
+
+<p>When a customer, a colleague or a supplier asks a question and the answer requires someone to look in three places and interpret what they find, you have a retrieval problem with a measurable delay attached. Where is my shipment; what is the status of this claim; has this invoice been approved; what did we agree in the contract.</p>
+
+<p>These are among the most tractable AI problems available today, and the delay they remove is felt directly by the person asking.</p>
+
+<h3>Anywhere work queues up behind one person</h3>
+
+<p>If a process pauses whenever a particular individual is on leave, that person is doing something the organisation depends on and has not systematised. That is both a risk and an opportunity, and it is usually a task involving pattern recognition over documents or history — exactly the shape of problem worth examining.</p>
+
+<h3>Anywhere the same message gets written every week</h3>
+
+<p>Status updates, chase emails, exception reports, meeting summaries, handover notes. Individually trivial; collectively, often a full day a week across a team. These are low-risk, high-frequency candidates that build organisational confidence before you attempt anything consequential.</p>
+
+<h2>Scoring what you find</h2>
+
+<p>Once you have a list — ten to twenty candidates is typical — score each on two axes and plot them.</p>
+
+<p><strong>Annual cost of the current process.</strong> Hours per occurrence, multiplied by frequency, multiplied by a loaded hourly rate, plus the cost of errors and delay. Rough numbers are fine; you are ranking, not budgeting.</p>
+
+<p><strong>Implementation difficulty.</strong> Driven mostly by data access and integration, not by model complexity. A process with clean data in one system is straightforward regardless of how sophisticated the reasoning is. A simple task spread across four systems with no API is not.</p>
+
+<p>The top-left quadrant — high cost, low difficulty — is where you start. Not the most strategically exciting item on the list; the one that will be running in production in eight weeks and paying for the next project.</p>
+
+<div class="callout">
+	<p><strong>A note on sequencing.</strong> The first project's real job is not the savings. It is to prove the organisation can take an AI system from idea to production and operate it. Choose accordingly: a smaller, certain win beats a larger, contested one every time at this stage.</p>
+</div>
+
+<h2>The candidates to leave alone</h2>
+
+<p>An honest audit rules things out. These are the patterns we actively recommend against as early projects:</p>
+
+<ul>
+	<li><strong>Processes nobody can describe consistently.</strong> If three people give three accounts of how it works, the process needs designing before it needs automating.</li>
+	<li><strong>Processes about to change anyway.</strong> Automating a workflow that a system migration will replace next year is a write-off.</li>
+	<li><strong>Processes where the cost is real but the benefit accrues to nobody in particular.</strong> Diffuse savings do not create the internal advocate a project needs to survive.</li>
+	<li><strong>Processes whose accuracy nobody currently measures.</strong> Without a baseline you cannot prove improvement, and the project will be judged on impressions.</li>
+	<li><strong>Anything where a wrong answer has regulatory or safety consequences</strong> — unless it is scoped explicitly as assistance, with a person accountable for the decision.</li>
+</ul>
+
+<h2>Running this yourself in a week</h2>
+
+<p>You do not need external help to do a first pass. A workable structure:</p>
+
+<ul class="checklist">
+	<li><strong>Days 1–2.</strong> Interview six to eight people who do the work, not their managers. Ask what took longest last week and what they would stop doing if allowed. Do not mention AI.</li>
+	<li><strong>Day 3.</strong> Collect the shadow spreadsheets. Ask each team what they maintain outside the core systems and why.</li>
+	<li><strong>Day 4.</strong> Count. Pull actual volumes from ticket systems, mailboxes and ERP logs for the candidates that emerged.</li>
+	<li><strong>Day 5.</strong> Score, plot and pick one. Write down the baseline you are trying to beat before anyone builds anything.</li>
+</ul>
+
+<p>The output is a ranked list with a defensible number attached to each item. That single artefact changes the conversation from "should we be doing something with AI" to "this process costs us this much, and here is what it would take to change it" — which is the conversation that actually leads to systems being built.</p>
+
+<div class="post-cta">
+	<h3>Want a second opinion on your list?</h3>
+	<p>We run a free AI audit across your operations and come back with a ranked set of automation opportunities, an estimate of what each is worth, and a straight answer on the ones we think you should skip.</p>
+	<p><a class="btn btn-primary" href="/automation-opportunities/">Book a free AI audit</a></p>
+</div>

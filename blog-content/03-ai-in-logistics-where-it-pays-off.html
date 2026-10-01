@@ -1,0 +1,87 @@
+<p class="lede">Logistics has been promised AI-driven transformation for a decade. Some of it arrived. A lot of it did not, and the gap between the two is instructive: the wins have come almost entirely from removing manual work and closing information gaps, not from the predictive optimisation that dominates the marketing.</p>
+
+<p>This is a practical view of where AI currently earns its cost in freight forwarding, shipping and supply chain operations — and where the returns are thinner than the pitch decks suggest.</p>
+
+<h2>The industry's real problem is not prediction. It is visibility and paperwork.</h2>
+
+<p>Ask an operations team what makes their week difficult and the answers are rarely about forecasting. They are about not knowing where something is, finding out too late that it has gone wrong, and the sheer volume of documents that have to be read, checked, re-keyed and chased.</p>
+
+<p>A single shipment can generate a bill of lading, commercial invoice, packing list, certificate of origin, insurance certificate, customs declaration and a chain of booking confirmations and arrival notices — arriving as PDFs, scans, email bodies and portal screenshots, from parties with no shared format. Someone reads all of them. Someone re-types the important parts into an operating system. Someone notices, or does not notice, when two documents disagree.</p>
+
+<p>That is where the cost sits, and it is precisely the kind of work that modern AI handles well: high-volume, structurally varied, semantically consistent. Understanding that shapes everything about where to start.</p>
+
+<h2>Five places AI pays off today</h2>
+
+<h3>1. Document extraction and cross-checking</h3>
+
+<p>Reading a document and pulling structured fields out of it is now a solved problem in the sense that matters commercially — accuracy is high enough, across enough layouts, that a person moves from doing the work to reviewing exceptions.</p>
+
+<p>The larger win is the second step, which is often skipped. Once several documents for the same shipment are machine-readable, the system can compare them: does the weight on the packing list match the bill of lading, does the HS code match the goods description, does the consignee match the booking. Discrepancies caught before submission are cheap. The same discrepancies caught by customs are not.</p>
+
+<h3>2. Exception detection across the shipment lifecycle</h3>
+
+<p>Most operations teams are structurally reactive. Problems surface when a customer asks, when a carrier notifies, or when a deadline has already passed. The work is not identifying the solution — experienced operators know what to do — it is finding out in time.</p>
+
+<p>AI is well suited to watching a stream of status events, sailing schedules and milestone data and flagging the shipments that have gone quiet, slipped against plan, or diverged from what similar shipments normally do at this stage. The output is not a prediction; it is an ordered list of what deserves attention this morning. Operationally, that is worth considerably more than a forecast.</p>
+
+<h3>3. Answering "where is my shipment", without a person</h3>
+
+<p>Status enquiries are a substantial and largely invisible cost. Each one interrupts an operator, requires them to check multiple sources, interpret what they find, and write a reply. Multiply by a customer base and it becomes a meaningful share of the team's week.</p>
+
+<p>The reason this is now tractable is that the hard part was never the lookup — it was understanding a loosely-worded question, resolving which shipment it refers to, and composing an answer in the register the customer expects. That is exactly what language models do well. Handled properly, with a clear escalation path when the system is unsure, this is one of the fastest paybacks available in the sector.</p>
+
+<h3>4. Rate handling and quote preparation</h3>
+
+<p>Rate sheets arrive from carriers in inconsistent spreadsheets, change frequently, and carry conditions expressed in prose. Building a quote means finding the applicable rate, layering surcharges, and checking validity. It is repetitive, judgement-light in the common cases, and expensive when done wrong.</p>
+
+<p>Normalising incoming rate data and assembling first-draft quotes is a strong candidate — with a person confirming, because pricing errors are directly financial. This is a good example of automation with a human decision at the end rather than automation replacing the decision.</p>
+
+<h3>5. Detention, demurrage and dwell cost</h3>
+
+<p>Accessorial charges are the classic example of a cost that is obvious in hindsight and invisible in advance. Free time expires, a container sits, and the charge appears on an invoice weeks later, at which point the argument is about who pays rather than whether it was avoidable.</p>
+
+<p>A system that tracks free-time clocks across a portfolio and surfaces the containers approaching expiry converts an after-the-fact dispute into a task somebody can act on. It is not sophisticated. It is consistently valuable, because the current alternative is usually a spreadsheet maintained by one diligent person.</p>
+
+<h2>Where the returns are thinner than advertised</h2>
+
+<h3>Demand forecasting</h3>
+
+<p>Forecasting attracts disproportionate attention because it sounds strategic. In practice, forecast quality is usually limited by the data available and by external volatility, not by the sophistication of the model. Organisations that switch to a more advanced forecasting approach without addressing data quality or the planning process around it typically see modest improvement and considerable disappointment.</p>
+
+<p>Forecasting is worth doing. It is rarely the right first project, because the payback is slow, diffuse and hard to attribute.</p>
+
+<h3>Route and load optimisation</h3>
+
+<p>This is a genuinely valuable area that is mostly not an AI problem. Vehicle routing, container stowage and network design are operations research problems with decades of mature solvers behind them. Where they fail in practice, the cause is usually incomplete constraint data or an unwillingness to follow the plan — neither of which a different class of model fixes.</p>
+
+<h3>Fully autonomous operational decisioning</h3>
+
+<p>Automatically rebooking, rerouting or re-tendering without human confirmation is technically feasible and commercially unwise in most operations today. The consequences are external and expensive, the exception rate in freight is high, and the trust required has not been established. Systems that recommend and prepare — with the operator confirming in one click — capture most of the value at a fraction of the risk.</p>
+
+<div class="callout">
+	<p><strong>The pattern across all of these:</strong> AI pays off in logistics where it removes reading, re-typing, checking and chasing. It disappoints where it is asked to replace judgement that operators are already good at, or to predict conditions the data cannot support.</p>
+</div>
+
+<h2>What good looks like operationally</h2>
+
+<p>A well-implemented system in this sector tends to share four characteristics.</p>
+
+<p><strong>It works inside the existing operating system.</strong> Freight teams live in their TMS or forwarding platform. An AI tool in a separate browser tab is a tool that gets used for two weeks. Output belongs in the shipment record.</p>
+
+<p><strong>It is explicit about uncertainty.</strong> An extracted field the system is unsure about should be visibly flagged rather than silently guessed, because a confidently wrong HS code is worse than an empty one.</p>
+
+<p><strong>It keeps an audit trail.</strong> Freight is a documented, disputed, sometimes regulated business. Every automated extraction, classification and message needs to be reconstructable months later.</p>
+
+<p><strong>It degrades safely.</strong> When a carrier's feed stops, when a portal changes, when a document type appears that nobody anticipated — the system should route to a person and say so, not fail silently or invent a value.</p>
+
+<h2>A sensible starting point</h2>
+
+<p>For most forwarders and shippers, the highest-return first project is document extraction with cross-document validation, or automated status response — both are bounded, both have a measurable manual baseline, and both produce visible relief for the operations team within weeks rather than quarters.</p>
+
+<p>Start by counting: how many documents were processed last month, how many status enquiries were answered, how long each takes. Those two numbers usually make the business case without further analysis.</p>
+
+<div class="post-cta">
+	<h3>Building AI into logistics operations</h3>
+	<p>We build AI systems for freight forwarders, shippers and supply chain teams — including our own logistics platforms. If you are weighing up where to start, we are happy to give you a straight assessment of what would pay back fastest in your operation.</p>
+	<p><a class="btn btn-primary" href="/cargora/">Explore Cargora</a> <a class="btn btn-ghost" href="/contact/">Talk to our team</a></p>
+</div>

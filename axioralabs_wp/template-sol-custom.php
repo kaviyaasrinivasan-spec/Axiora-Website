@@ -3,12 +3,12 @@
   <section class="page-hero">
     <div class="wrap sol-hero-grid">
       <div class="sol-hero-inner reveal">
-        <span class="eyebrow">Custom AI Solutions</span>
-        <h1>AI Built Specifically <span class="grad2">for Your Business.</span></h1>
+        <span class="eyebrow">USA &middot; UK &middot; UAE &middot; Australia &middot; Singapore</span>
+        <h1>Custom AI <span class="grad2">Solutions.</span></h1>
         <span class="accent-bar"></span>
-        <p class="lead">Every business is different. Off-the-shelf AI tools rarely solve unique operational challenges.</p>
-        <p class="sub-p">We design and build custom AI applications tailored to your workflows, industry, and business goals. From intelligent assistants and document AI to predictive analytics and workflow automation, every solution is developed around your requirements.</p>
-        <p class="sub-p">Whether you need a customer-facing AI assistant or an internal productivity platform, we create scalable AI solutions that deliver measurable business value.</p>
+        <p class="lead">Unlike software purchased off the shelf, our applications will meet the specific needs of your organization. With the variety of industry verticals we work in mind, we create software solutions without the use of templates or generic applications.</p>
+        <p class="sub-p">Automated workflows, cloud-based AI assistants, predictive analytics, and intelligent document processing are just a few of the solutions we implement. We design each of these custom-developed applications to your specifications, ensuring seamless integration with existing systems.</p>
+        <p class="sub-p">Custom applications developed with your organization in mind are the scalable solutions to your needs. We&rsquo;re proud of the partnerships we&rsquo;ve formed with clients across the operational and regulatory landscapes of the USA, UK, UAE, Australia, and Singapore.</p>
       </div>
       <div class="sol-viz reveal">
         <div class="viz">

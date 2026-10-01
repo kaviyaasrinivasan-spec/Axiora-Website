@@ -6,3 +6,7 @@ source/
 Thumbs.db
 *.log
 node_modules/
+
+# Deployment credentials — never commit
+.env
+**/.env

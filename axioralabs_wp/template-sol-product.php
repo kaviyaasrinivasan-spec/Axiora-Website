@@ -3,12 +3,12 @@
   <section class="page-hero">
     <div class="wrap sol-hero-grid">
       <div class="sol-hero-inner reveal">
-        <span class="eyebrow">AI Product Engineering</span>
-        <h1>Build AI Products <span class="grad2">That Scale.</span></h1>
+        <span class="eyebrow">USA &middot; UK &middot; UAE &middot; Australia &middot; Singapore</span>
+        <h1>AI Product <span class="grad2">Engineering.</span></h1>
         <span class="accent-bar"></span>
-        <p class="lead">Have an AI product idea?</p>
-        <p class="sub-p">We help startups and enterprises transform ideas into production-ready AI products. From product strategy and architecture to development, testing, deployment, and continuous improvement, our engineering team manages the complete product lifecycle.</p>
-        <p class="sub-p">Our focus is building secure, scalable, and enterprise-ready AI platforms that are easy to maintain and grow.</p>
+        <p class="lead">Looking for an AI product?</p>
+        <p class="sub-p">Our AI product engineering team has got you covered. We partner with startups and enterprises to transform their concepts into AI products that are ready for market with our expertise in building AI solutions from scratch with a focus on architecture, ongoing support, testing, deployment, and further product enhancements. Our team takes full ownership of a product&rsquo;s lifecycle to alleviate the burden from our clients.</p>
+        <p class="sub-p">Our priorities are to develop maintainable and upgradable AI platforms for enterprises that are built with a foundation of security and scalability. We provide AI product engineering solutions to both startups and enterprises located in the USA, UK, UAE, Australia and Singapore, and we have customized our solutions to match the varying compliance and technical standards of each given market.</p>
       </div>
       <div class="sol-viz reveal">
         <div class="viz">

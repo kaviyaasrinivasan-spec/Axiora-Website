@@ -1,6 +1,7 @@
 // Builds a WordPress-safe ZIP (classic PKZIP, deflate, CRC in local header, no data descriptors, forward slashes)
 const fs=require("fs"), path=require("path"), zlib=require("zlib");
-const ROOT="C:/Users/abcom/Desktop/office/Workboosterai_WP";
+// Override with WP_ROOT=<repo root> when the repo isn't at the original author's path.
+const ROOT=process.env.WP_ROOT||path.resolve(__dirname, "..");
 const THEME="axioralabs_wp";
 const OUTZIP=path.join(ROOT,"axioralabs_wp.zip");
 

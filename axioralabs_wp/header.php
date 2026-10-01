@@ -109,10 +109,10 @@
         <li class="has-drop">
           <span class="nav-link" role="button" tabindex="0">Solutions <svg class="icon chev"><use href="#i-chev"/></svg></span>
           <div class="dropdown">
-            <a href="/ai-consulting/"><span class="di"><svg class="icon"><use href="#i-bulb"/></svg></span><span><span class="t">AI Automation Assessment &amp; Consulting</span><span class="d">Plan your AI journey and roadmap</span></span></a>
+            <a href="/ai-consulting/"><span class="di"><svg class="icon"><use href="#i-bulb"/></svg></span><span><span class="t">AI Automation Consulting</span><span class="d">Plan your AI journey and roadmap</span></span></a>
             <a href="/custom-ai-solutions/"><span class="di"><svg class="icon"><use href="#i-code"/></svg></span><span><span class="t">Custom AI Solutions</span><span class="d">Intelligent apps &amp; process automation</span></span></a>
             <a href="/ai-product-engineering/"><span class="di"><svg class="icon"><use href="#i-flow"/></svg></span><span><span class="t">AI Product Engineering</span><span class="d">Ideas to production-ready AI products</span></span></a>
-            <a href="/dedicated-ai-engineering/"><span class="di"><svg class="icon"><use href="#i-users"/></svg></span><span><span class="t">AI Development Outsourcing &amp; IT Staffing</span><span class="d">Dedicated AI engineers for your team</span></span></a>
+            <a href="/dedicated-ai-engineering/"><span class="di"><svg class="icon"><use href="#i-users"/></svg></span><span><span class="t">AI Development Services</span><span class="d">Dedicated AI engineers for your team</span></span></a>
           </div>
         </li>
         <li class="has-drop">
@@ -152,10 +152,10 @@
       <li class="m-acc">
         <button class="m-acc-btn" type="button" aria-expanded="false">Solutions <svg class="icon m-chev"><use href="#i-chev"/></svg></button>
         <div class="m-panel">
-          <a href="/ai-consulting/">AI Automation Assessment &amp; Consulting</a>
+          <a href="/ai-consulting/">AI Automation Consulting</a>
           <a href="/custom-ai-solutions/">Custom AI Solutions</a>
           <a href="/ai-product-engineering/">AI Product Engineering</a>
-          <a href="/dedicated-ai-engineering/">AI Development Outsourcing &amp; IT Staffing</a>
+          <a href="/dedicated-ai-engineering/">AI Development Services</a>
         </div>
       </li>
       <li class="m-acc">

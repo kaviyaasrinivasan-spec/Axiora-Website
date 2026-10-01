@@ -1,0 +1,98 @@
+<p class="lede">Almost every enterprise we speak to has run an AI pilot. Far fewer have an AI system running in production, owned by a named team, that people would complain about if it were switched off. The gap between those two states is where most AI budgets quietly disappear — and it is rarely a modelling problem.</p>
+
+<p>The pattern is consistent enough to be predictable. A team builds a promising proof of concept in a few weeks. The demo goes well. Leadership is impressed. Then the project enters a long, ambiguous phase where it is neither cancelled nor deployed, and eighteen months later nobody can quite say what happened to it.</p>
+
+<p>This article is about why that happens, and what the projects that make it to production do differently. None of it is exotic. Most of it is decided before a single line of model code is written.</p>
+
+<h2>A pilot is not a small version of production</h2>
+
+<p>The most common structural mistake is treating the pilot as a scaled-down deployment — as though production is the same thing with more users. It isn't. They optimise for opposite conditions.</p>
+
+<p>A pilot is built to show what is possible. It runs on a curated dataset, on inputs someone chose, in a demo environment, with the person who built it in the room. It is judged on its best case.</p>
+
+<p>Production is judged on its worst case. It runs on whatever arrives, including the malformed, the duplicated and the deliberately odd. It runs when the source system is down, when the format changed without notice, and at 2am when nobody is watching. It is used by people who did not build it, do not trust it yet, and have a job to do regardless of whether it works.</p>
+
+<p>A pilot that has never been exposed to the worst case has not actually reduced the risk of the project. It has only demonstrated the ceiling. The distance to production is still entirely unmeasured — which is exactly why these projects stall in ambiguity rather than fail cleanly.</p>
+
+<h2>Five things that quietly kill a promising pilot</h2>
+
+<h3>1. There is no owner on the business side</h3>
+
+<p>If the only people who care about the project sit in IT or in an innovation function, it will not survive contact with an operating budget. Someone who owns the process — the head of claims, the logistics manager, the finance controller — has to want the outcome badly enough to change how their team works. Without that, there is no one to argue for the project when priorities are set, and no one whose numbers improve when it succeeds.</p>
+
+<p>The clearest diagnostic question: if this system were switched off tomorrow, whose week gets worse? If the honest answer is "nobody's", the project is not yet solving a real problem.</p>
+
+<h3>2. The data was quietly cleaned by hand</h3>
+
+<p>Almost every pilot involves someone exporting a file, fixing the obvious errors, and standardising the fields before the model ever sees the data. This is entirely reasonable during exploration. It becomes fatal when the effort is never accounted for.</p>
+
+<p>In production, that cleanup either has to be automated or it has to be done by a person, every day, forever. If nobody has costed it, the project's real economics are unknown. We have seen more pilots die on this than on model performance.</p>
+
+<h3>3. Nobody defined what "good enough" means</h3>
+
+<p>"It works well" is not a deployment criterion. Without an agreed threshold, every stakeholder applies their own — and the strictest one wins by default, usually late in the process and usually in a meeting.</p>
+
+<p>Good enough has to be defined against the current process, not against perfection. If invoice coding is done by people today with a certain error rate and a certain turnaround time, those are the numbers the system has to beat. A system that is 92% accurate sounds unimpressive in the abstract and is transformative if the manual baseline is 85% at four times the cost.</p>
+
+<h3>4. It has no place in anyone's workflow</h3>
+
+<p>A model that produces excellent output into a dashboard nobody opens has produced nothing. The output has to arrive where the decision is already being made — in the ERP screen, the ticket queue, the email thread, the WhatsApp group where the operations team actually coordinates.</p>
+
+<p>This is usually the least glamorous part of the build and the one most often deferred. It is also the part that determines adoption. Integration is not a phase-two concern; it is the product.</p>
+
+<h3>5. There is no plan for being wrong</h3>
+
+<p>Every AI system is wrong sometimes. Systems that reach production have an answer to four questions: How does a user know the system is uncertain? How do they override it? Where does the override get recorded? And who looks at those records?</p>
+
+<p>Systems without those answers do not fail gracefully — they fail invisibly, users stop trusting them, and usage decays until someone notices the licence is being paid for nothing.</p>
+
+<h2>What the projects that ship do differently</h2>
+
+<h3>They start from a process, not a technology</h3>
+
+<p>The projects that work begin with a specific, bounded, repetitive process that is currently done by people, and where the cost of doing it is known. Not "we should use AI in procurement" but "three people spend most of Monday reconciling supplier invoices against goods-received notes, and errors cost us in credit notes."</p>
+
+<p>That framing gives you a baseline to beat, a person who benefits, and a number that changes. Technology-first framing gives you none of those, which is why it produces pilots instead of systems.</p>
+
+<h3>They define the failure mode before the success metric</h3>
+
+<p>Before asking "how accurate is it?", the useful question is "what happens when it is wrong, and how bad is that?". A system that mis-tags a support ticket costs a few minutes. A system that mis-classifies a payment costs money and trust. A system that mis-reads a clinical document is not a candidate for automation at all — it is a candidate for assistance, with a human decision at the end.</p>
+
+<p>The answer determines the entire design: how much automation is appropriate, where the human sits, how much explanation the interface owes the user. Answering it first prevents building the wrong shape of system very competently.</p>
+
+<h3>They build the unglamorous parts first</h3>
+
+<p>Ingestion, validation, monitoring, logging, retries, access control, an audit trail. These are not the parts that demo well, and they are the parts that decide whether the system survives its first month. Teams that build them last discover in month three that they have a prototype that cannot be operated.</p>
+
+<h3>They ship to ten users before a thousand</h3>
+
+<p>A limited rollout to a real team, doing real work, on real inputs, produces more useful information in two weeks than another quarter of pilot refinement. It surfaces the workflow mismatches, the edge cases and the trust problems while they are still cheap to fix — and it creates the internal advocates who make the wider rollout possible.</p>
+
+<h2>A short test before you fund the next pilot</h2>
+
+<p>Before committing budget, we would ask a prospective project to answer these. If more than two are unanswered, the project is not ready — and that is a useful thing to discover before spending on it rather than after.</p>
+
+<ul class="checklist">
+	<li>Which specific process does this replace or accelerate, and who owns that process today?</li>
+	<li>What does that process cost right now — in hours, errors, delay or rework?</li>
+	<li>What accuracy or turnaround would make this worth deploying, measured against that baseline?</li>
+	<li>What happens when the system is wrong, and who bears that cost?</li>
+	<li>Where does the output appear, in a screen someone already has open?</li>
+	<li>Who reviews the overrides, and how often?</li>
+	<li>What has to be true about the data pipeline for this to run without manual preparation?</li>
+	<li>Who operates this in twelve months, and is that in their budget?</li>
+</ul>
+
+<h2>The uncomfortable conclusion</h2>
+
+<p>Most stalled AI projects were not technically unsound. They were organisationally unfinished. The model worked; the process around it was never designed, and so the system had nowhere to live.</p>
+
+<p>This is genuinely good news, because organisational readiness is cheaper to fix than model performance and can largely be established before the build starts. The discipline is simply to do that thinking first — to treat "who owns this, what does it cost today, and what happens when it is wrong" as engineering questions rather than paperwork.</p>
+
+<p>The organisations getting real value from AI right now are rarely the ones with the most advanced models. They are the ones that picked narrower problems, defined success honestly, and built the boring infrastructure that lets a system be operated by people who did not build it.</p>
+
+<div class="post-cta">
+	<h3>Not sure which of your processes are worth automating?</h3>
+	<p>Our free AI audit walks through your operations and identifies the processes where automation would pay back fastest — with an honest assessment of the ones that shouldn't be automated at all.</p>
+	<p><a class="btn btn-primary" href="/automation-opportunities/">Book a free AI audit</a></p>
+</div>

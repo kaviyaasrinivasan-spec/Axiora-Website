@@ -1,0 +1,105 @@
+<p class="lede">"Should we build this or buy it?" is the wrong first question about enterprise AI, because it assumes a single decision. In practice there are four layers to any AI system, and most organisations should be buying at some and building at others. Getting the split right matters more than the answer at any individual layer.</p>
+
+<h2>Four layers, four different decisions</h2>
+
+<p>Every AI system in production sits on the same stack. The economics are completely different at each level.</p>
+
+<p><strong>The model.</strong> The underlying intelligence. Almost nobody should build here. Training a competitive foundation model is a capital-intensive undertaking with no defensible return for a business whose product is not the model itself. Buy, and design so you can switch — this layer is improving and repricing faster than any other.</p>
+
+<p><strong>The platform.</strong> Orchestration, retrieval, evaluation, monitoring, guardrails. A crowded and immature market. Buying here accelerates the first project and can constrain the fifth. Reasonable either way, and worth deciding deliberately rather than by default.</p>
+
+<p><strong>The application.</strong> The thing that solves your specific problem — the logic, the workflow, the interface, the rules that reflect how your business actually works. This is almost always where building is justified, because it encodes exactly the knowledge no vendor has.</p>
+
+<p><strong>The integration.</strong> Connecting to your ERP, your document stores, your identity provider, your operational systems. Nobody sells this to you, because it is specific to you. It is also, reliably, the largest share of the effort — and the part most often underestimated at the point of decision.</p>
+
+<p>Framed this way, "build or buy" resolves into something more useful: buy the model, decide consciously on the platform, build the application and the integration. The interesting question then becomes who does the building.</p>
+
+<h2>When buying the whole thing is right</h2>
+
+<p>An off-the-shelf product is the correct answer more often than technology teams like to admit. Buy when:</p>
+
+<ul>
+	<li><strong>The process is genuinely standard.</strong> Payroll, expense processing, e-signature, common CRM workflows. If your version is not meaningfully different from everyone else's, you are paying to rebuild a commodity.</li>
+	<li><strong>The vendor's product is their whole business.</strong> They will out-invest you on that specific problem indefinitely.</li>
+	<li><strong>Speed matters more than fit.</strong> A tool live next month at 80% fit frequently beats a perfect one live next year.</li>
+	<li><strong>You have no one to operate a custom system.</strong> Software you cannot maintain is a liability, however well built.</li>
+</ul>
+
+<p>The honest test: if you cannot articulate why your version of this process is different in a way that matters commercially, buy it.</p>
+
+<h2>When building is right</h2>
+
+<p>Building is justified when the process is a source of advantage rather than a cost of doing business. Specifically:</p>
+
+<ul>
+	<li><strong>The workflow is genuinely yours.</strong> Encoded in how your operations team works, your commercial terms, your regulatory position. Configuration cannot reach it.</li>
+	<li><strong>The integration surface is the hard part.</strong> If most of the effort is connecting to systems only you have, the "buy" saving is smaller than it appears — you are buying the easy 20%.</li>
+	<li><strong>The data cannot leave.</strong> Regulatory, contractual or competitive constraints that rule out sending information to a third-party product.</li>
+	<li><strong>You intend to do this repeatedly.</strong> The second and third AI systems are dramatically cheaper if the first established your patterns for data access, evaluation and monitoring. Vendor products build no such capability.</li>
+</ul>
+
+<h2>The blend most enterprises actually need</h2>
+
+<p>The practical answer for the majority of mid-to-large organisations is neither pure route. It is: buy the foundation, build the layer that reflects your business, and own the integration.</p>
+
+<p>Concretely, that usually means commercial models accessed through an abstraction you control, a deliberate decision on orchestration tooling, and custom-built application logic and interfaces sitting inside the systems your people already use.</p>
+
+<p>This blend is more work than buying and considerably less than building everything. Crucially, it leaves you owning the parts that are specific to you and renting the parts that are commoditising — which is the right way round, because the rented parts are getting cheaper and better every quarter, and the owned parts are where your advantage lives.</p>
+
+<div class="callout">
+	<p><strong>A design principle worth adopting early:</strong> assume every component you buy today will be replaced within three years. Build the seams accordingly. The organisations struggling most right now are those that wrote a specific vendor's assumptions through their entire codebase in 2023.</p>
+</div>
+
+<h2>The staffing question nobody costs properly</h2>
+
+<p>Deciding to build raises a second question that is frequently answered by default rather than by analysis: who builds it. There are three routes, with genuinely different economics.</p>
+
+<h3>Hire your own team</h3>
+
+<p>The right long-term answer if AI is going to be central to how you operate. It is also the slowest and most expensive to start. Hiring experienced AI engineers takes months in most markets, the first hire has nobody to learn from, and a team of two carries real key-person risk. Sensible when you have a multi-year roadmap and can keep the team busy; expensive when you have one project.</p>
+
+<h3>Project-based delivery</h3>
+
+<p>An external team scopes, builds and hands over. Fast to start, with a defined cost. The failure mode is well known: the system is delivered, the team leaves, and the organisation discovers it cannot change or operate what it now owns. This route works well when the scope is genuinely bounded and badly when the system needs to keep evolving — which most AI systems do, because the models underneath them change.</p>
+
+<h3>Embedded engineers</h3>
+
+<p>Experienced engineers working as part of your team, on your priorities, under your direction — without the hiring cycle. This suits the common enterprise situation of a real roadmap but no in-house AI capability yet, and it addresses the handover problem directly, because knowledge accumulates alongside your own people rather than leaving with a project.</p>
+
+<p>The right choice depends less on cost per head than on how long the work continues and how much of the capability you intend to retain. A single bounded project favours project delivery. A programme of work over eighteen months usually favours embedding, with the goal of transferring ownership.</p>
+
+<h2>A decision framework</h2>
+
+<p>Five questions that resolve most of these decisions quickly:</p>
+
+<ul class="checklist">
+	<li><strong>Is this process a source of advantage, or a cost of doing business?</strong> Advantage justifies building. Cost usually justifies buying.</li>
+	<li><strong>What proportion of the effort is integration?</strong> If it is more than half, buying saves less than the licence cost suggests.</li>
+	<li><strong>Will this be the only AI system we build?</strong> If not, the first project should deliberately establish reusable foundations.</li>
+	<li><strong>Who operates this in eighteen months, and is that funded?</strong> If there is no answer, favour the route with the lowest operating burden.</li>
+	<li><strong>What happens if the vendor doubles their price or is acquired?</strong> If that is existential, do not build your business on it without an exit path.</li>
+</ul>
+
+<h2>What to insist on, whichever route you take</h2>
+
+<p>These are contractual and architectural, and they are much easier to secure at the start than to retrofit:</p>
+
+<ul>
+	<li><strong>Your data stays yours,</strong> is not used to train shared models without explicit agreement, and can be exported in a usable form.</li>
+	<li><strong>You own the code and the IP</strong> for anything custom-built, unambiguously, in writing.</li>
+	<li><strong>The model layer is abstracted,</strong> so changing provider is a configuration change rather than a rebuild.</li>
+	<li><strong>Evaluation is part of the deliverable.</strong> A test set and a way of measuring quality, so you can tell whether a change made things better — without it you are managing on impressions.</li>
+	<li><strong>Documentation and a genuine handover,</strong> defined as a named person on your side being able to make a change unaided.</li>
+</ul>
+
+<h2>The short version</h2>
+
+<p>Buy the model. Decide the platform deliberately. Build the application and the integration, because that is where your business actually lives. Then choose a delivery route based on how long the work continues, not on the day rate.</p>
+
+<p>The organisations that get this wrong usually do so in one of two directions: buying a product that cannot reach their real process, or building infrastructure that the market gave away for free six months later. The middle path is less exciting and considerably more durable.</p>
+
+<div class="post-cta">
+	<h3>Working out the right route for your organisation?</h3>
+	<p>We work across all three models — consulting on the decision, building custom AI systems, and embedding engineers into existing teams. We are happy to give you a straight recommendation, including when the answer is that you should buy something instead.</p>
+	<p><a class="btn btn-primary" href="/ai-consulting/">AI consulting</a> <a class="btn btn-ghost" href="/contact/">Talk to our team</a></p>
+</div>

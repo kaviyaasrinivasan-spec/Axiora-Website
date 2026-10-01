@@ -3,12 +3,12 @@
   <section class="page-hero">
     <div class="wrap sol-hero-grid">
       <div class="sol-hero-inner reveal">
-        <span class="eyebrow">AI Automation Assessment & Consulting</span>
-        <h1>Understand Where AI Can Create <span class="grad2">the Biggest Business Impact.</span></h1>
+        <span class="eyebrow">USA &middot; UK &middot; UAE &middot; Australia &middot; Singapore</span>
+        <h1>AI Automation <span class="grad2">Consulting.</span></h1>
         <span class="accent-bar"></span>
-        <p class="lead">Most businesses know AI is important, but few know where to start.</p>
-        <p class="sub-p">Our AI consultants analyze your current business processes, identify repetitive manual tasks, and create a practical AI automation roadmap with measurable ROI. Instead of replacing your existing systems, we help AI work alongside your ERP, CRM, accounting software, and internal applications.</p>
-        <p class="sub-p">Whether you're in logistics, healthcare, manufacturing, finance, legal services, or professional services, we help you discover high-impact automation opportunities that save time, reduce costs, and improve productivity.</p>
+        <p class="lead">We exist to address the most pervasive issue on the market. Most businesses understand the value that AI can add to their operations but do not know where to implement it.</p>
+        <p class="sub-p">The purpose of our AI automation consulting is to appropriately implement AI solutions into business operations. Our team analyzes existing business operations to identify manual procedures, bottlenecks, and tasks that can be easily automated. We then provide you with solutions you can implement to address the problems you are facing. We won&rsquo;t take solutions out that you already have in place. We will make AI solutions work in tandem with existing platforms such as ERPs, CRMs, and accounting software.</p>
+        <p class="sub-p">We work with businesses from multiple industries, such as logistics, healthcare, manufacturing, finance, legal, and multiple other professional services. Our AI automation consulting provides businesses the opportunity to implement AI solutions to reduce operational costs, improve efficiency, and decrease the number of low-value tasks. We work in the USA, UK, UAE, Singapore, and Australia and have customized our solutions to the diverse markets we work within.</p>
       </div>
       <div class="sol-viz reveal">
         <div class="viz">

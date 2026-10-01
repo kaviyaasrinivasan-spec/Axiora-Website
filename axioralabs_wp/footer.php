@@ -13,7 +13,7 @@
             <a href="tel:+918122784236" aria-label="Phone"><svg class="icon"><use href="#i-phone"/></svg></a>
           </div>
         </div>
-        <div class="foot-col"><h4>Quick Links</h4><ul><li><a href="/ai-consulting/">Solutions</a></li><li><a href="/cargora/">AI Products</a></li><li><a href="/industries/">Industries</a></li><li><a href="/about/">About Us</a></li><li><a href="/contact/">Contact</a></li><li><a href="/careers/">Careers</a></li></ul></div>
+        <div class="foot-col"><h4>Quick Links</h4><ul><li><a href="/ai-consulting/">Solutions</a></li><li><a href="/cargora/">AI Products</a></li><li><a href="/industries/">Industries</a></li><li><a href="/about/">About Us</a></li><li><a href="/contact/">Contact</a></li><li><a href="/careers/">Careers</a></li><li><a href="/blog/">Blog</a></li></ul></div>
         <div class="foot-col"><h4>AI Products</h4><ul><li><a href="/cargora/">Cargora</a></li><li><a href="https://iclinical.ai/" target="_blank" rel="noopener">iClinicalAI</a></li><li><a href="https://meetingclosure.axioralabs.ai/" target="_blank" rel="noopener">MeetingClosure</a></li><li><a href="https://beta.customsflowai.in" target="_blank" rel="noopener">CustomsFlow AI</a></li><li><a href="https://boostentryai.com/" target="_blank" rel="noopener">BoostEntry AI</a></li><li><a href="https://trackcontainer.in/" target="_blank" rel="noopener">TrackContainer</a></li></ul></div>
         <div class="foot-col"><h4>Contact</h4><ul class="foot-contact">
           <li><a href="mailto:sales@axioralabs.ai"><svg class="icon"><use href="#i-mail"/></svg><span>sales@axioralabs.ai</span></a></li>

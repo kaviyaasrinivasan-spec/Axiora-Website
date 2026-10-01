@@ -3,12 +3,12 @@
   <section class="page-hero">
     <div class="wrap sol-hero-grid">
       <div class="sol-hero-inner reveal">
-        <span class="eyebrow">AI Development Outsourcing & IT Staffing</span>
-        <h1>Extend Your Team with <span class="grad2">Experienced AI Engineers.</span></h1>
+        <span class="eyebrow">USA &middot; UK &middot; UAE &middot; Australia &middot; Singapore</span>
+        <h1>AI Development <span class="grad2">Services.</span></h1>
         <span class="accent-bar"></span>
-        <p class="lead">Need AI expertise without long hiring cycles?</p>
-        <p class="sub-p">Our dedicated AI engineers work as an extension of your internal team. Whether you need a single AI developer or a complete engineering team, we provide experienced professionals who can quickly contribute to your projects.</p>
-        <p class="sub-p">We support startups, software companies, and enterprises with flexible engagement models that reduce hiring costs while accelerating delivery.</p>
+        <p class="lead">Save time on hiring by working with us for your AI development needs.</p>
+        <p class="sub-p">Having our dedicated AI engineers means you benefit from a developed team of AI engineers. Whether you require one specialist developer or a dozen, we have the capacity and capability to send developers to your workplace.</p>
+        <p class="sub-p">Our AI development services have provided flexible engagement models to build long-term partnerships while reducing costs for our clients across Asia and the Pacific. From the UK, USA, UAE, Australia and Singapore.</p>
       </div>
       <div class="sol-viz reveal">
         <div class="viz">

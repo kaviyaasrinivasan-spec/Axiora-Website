@@ -1,3 +1,8 @@
+<!-- SOURCE-OF-TRUTH WARNING: axioralabs_wp/template-contact.php has been hand-
+     edited well beyond what this file generates (nonce, admin-post action,
+     honeypot, wb_lead_choices() option loops, notice rendering, field ids
+     contact.js depends on). Regenerating via build_theme.js will silently
+     revert all of that. Reconcile before running. -->
 <main id="top">
   <section class="page-hero">
     <div class="wrap inner">
@@ -24,6 +29,10 @@
             <div class="field">
               <label>Company Name <span class="req">*</span></label>
               <input type="text" name="companyName" placeholder="e.g. Acme Tech Solutions" required>
+            </div>
+            <div class="field">
+              <label>Email Address <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="e.g. rahul@acmetech.com" required>
             </div>
             <div class="field">
               <label>Mobile Number <span class="req">*</span></label>
