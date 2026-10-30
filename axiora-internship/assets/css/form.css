@@ -123,6 +123,27 @@
 .axi-ref-code{font-family:var(--display);font-size:24px;font-weight:700;color:var(--ink);letter-spacing:-.01em;}
 .axi-success-note{font-size:13px;color:var(--muted);line-height:1.6;max-width:460px;}
 
+/* ---------- QA Engineer page ---------- */
+/* Two classes so it beats the theme's .section padding, which loads after this file. */
+.axi-qa .axi-qa-apply{padding-top:24px;}
+.axi-form-head h1{font-size:23px;margin-bottom:8px;}
+/* Same look as a field <label>, for the radio group's caption. */
+.axi-field-label{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.09em;
+  text-transform:uppercase;color:#5a6382;}
+.axi-choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.axi-field .axi-choice-opt{position:relative;display:flex;cursor:pointer;
+  font-size:14.5px;font-family:var(--sans);font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink);}
+.axi-choice-opt input{position:absolute;opacity:0;width:1px;height:1px;}
+.axi-choice-opt span{flex:1;display:flex;align-items:center;gap:10px;border:1.5px solid var(--line-strong);
+  border-radius:11px;padding:12px 14px;background:#fff;transition:border-color .2s,background .2s,box-shadow .2s;}
+.axi-choice-opt span::before{content:"";width:16px;height:16px;flex:none;border-radius:50%;
+  border:1.5px solid var(--line-strong);background:#fff;transition:border .2s;}
+.axi-choice-opt:hover span{border-color:var(--brand);}
+.axi-choice-opt input:checked + span{border-color:var(--brand);background:var(--bg-tint);}
+.axi-choice-opt input:checked + span::before{border:5px solid var(--brand);}
+.axi-choice-opt input:focus-visible + span{box-shadow:0 0 0 4px rgba(60,89,231,.12);}
+.axi-field.is-invalid .axi-choice-opt span{border-color:var(--red);}
+
 /* ---------- Honeypot (never shown to a person) ---------- */
 .axi-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
 

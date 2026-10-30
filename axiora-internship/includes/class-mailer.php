@@ -24,14 +24,14 @@ class Axiora_Internship_Mailer {
 	}
 
 	/** Shared branded HTML wrapper. */
-	protected static function wrap( $heading, $body_html, $footnote = '' ) {
+	protected static function wrap( $heading, $body_html, $footnote = '', $subtitle = 'GenAI Internship Programme' ) {
 		$logo_color = '#3c59e7';
 
 		$html  = '<div style="margin:0;padding:24px;background:#f5f7fd;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">';
 		$html .= '<div style="max-width:600px;margin:0 auto;background:#ffffff;border:1px solid #e6e9f4;border-radius:14px;overflow:hidden;">';
 		$html .= '<div style="background:linear-gradient(90deg,#0b1440,#131f4e);padding:20px 26px;">';
 		$html .= '<div style="color:#ffffff;font-size:18px;font-weight:700;letter-spacing:-0.02em;">AXIORA <span style="color:#8ea2e8;">LABS</span></div>';
-		$html .= '<div style="color:#c7d2f5;font-size:12px;margin-top:2px;">GenAI Internship Programme</div>';
+		$html .= '<div style="color:#c7d2f5;font-size:12px;margin-top:2px;">' . esc_html( $subtitle ) . '</div>';
 		$html .= '</div>';
 		$html .= '<div style="padding:26px;">';
 		$html .= '<h2 style="margin:0 0 14px;font-size:19px;color:#0f1730;">' . esc_html( $heading ) . '</h2>';
@@ -71,11 +71,19 @@ class Axiora_Internship_Mailer {
 			return false;
 		}
 
+		$programme = isset( $app->programme ) ? $app->programme : 'genai';
+		$is_genai  = ( 'genai' === $programme );
+		$label     = axi_int_programme_label( $programme );
+
 		$body  = '<p style="margin:0 0 16px;color:#475069;font-size:14px;line-height:1.65;">'
-			. 'A new GenAI internship application was submitted on the website.</p>';
+			. ( $is_genai
+				? 'A new GenAI internship application was submitted on the website.'
+				: 'A new job application was submitted on the website.' ) . '</p>';
 		$body .= '<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;">';
 		$body .= self::row( 'Reference', $app->ref_code );
+		$body .= self::row( 'Programme', $label );
 		$body .= self::row( 'Name', $app->full_name );
+		$body .= self::row( 'Gender', isset( $app->gender ) ? $app->gender : '' );
 		$body .= self::row( 'Email', $app->email );
 		$body .= self::row( 'Phone', $app->phone );
 		$body .= self::row( 'College / University', $app->college );
@@ -97,12 +105,19 @@ class Axiora_Internship_Mailer {
 			. 'style="display:inline-block;background:#3c59e7;color:#ffffff;text-decoration:none;font-weight:600;'
 			. 'font-size:14px;padding:12px 22px;border-radius:10px;">Open in the admin portal</a></p>';
 
-		$subject = sprintf( '[%s] New internship application — %s', $app->ref_code, $app->full_name );
+		$subject = $is_genai
+			? sprintf( '[%s] New internship application — %s', $app->ref_code, $app->full_name )
+			: sprintf( '[%s] New job application — %s', $app->ref_code, $app->full_name );
 
 		return wp_mail(
 			self::team_address(),
 			$subject,
-			self::wrap( 'New internship application', $body, 'The resume is attached to the record and can be downloaded from the admin portal.' ),
+			self::wrap(
+				$is_genai ? 'New internship application' : 'New job application',
+				$body,
+				'The resume is attached to the record and can be downloaded from the admin portal.',
+				$is_genai ? 'GenAI Internship Programme' : 'Careers'
+			),
 			self::headers()
 		);
 	}

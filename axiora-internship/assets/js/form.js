@@ -1,4 +1,4 @@
-/* Axiora Labs — GenAI internship application form.
+/* Axiora Labs — internship application forms (GenAI internship and general job application).
    Vanilla JS to match the rest of the theme (no libraries). */
 (function () {
   'use strict';
@@ -34,8 +34,48 @@
     if (box) { box.hidden = true; box.textContent = ''; }
   }
 
+  function validateResume(form, errors) {
+    var file = form.querySelector('[name="resume"]');
+    if (!file || !file.files || !file.files.length) {
+      errors.resume = 'Please attach your resume (PDF or Word, up to 5 MB).';
+    } else {
+      var f = file.files[0];
+      var max = CFG.maxSize || 5242880;
+      if (f.size > max) {
+        errors.resume = 'That file is larger than ' + (CFG.maxSizeMB || 5) + ' MB. Please upload a smaller one.';
+      } else if (!/\.(pdf|doc|docx)$/i.test(f.name)) {
+        errors.resume = 'Only PDF, DOC and DOCX files are accepted.';
+      }
+    }
+  }
+
+  /* Job application form — mirrors Axiora_Internship_Form::validate_qa(). */
+  function validateQa(form) {
+    var errors = {};
+    var val = function (n) {
+      var el = form.querySelector('[name="' + n + '"]');
+      return el ? String(el.value || '').trim() : '';
+    };
+    var hasLetter = function (s) { return /[A-Za-zÀ-￿]/.test(s); };
+
+    if (val('full_name').length < 2 || !hasLetter(val('full_name'))) errors.full_name = 'Please enter your full name.';
+
+    var phone = val('phone');
+    var digits = phone.replace(/\D+/g, '');
+    if (!/^\+?[0-9\s\-().]+$/.test(phone) || digits.length < 10 || digits.length > 15) {
+      errors.phone = 'Please enter a valid phone number (10 to 15 digits).';
+    }
+
+    if (val('city').length < 2 || !hasLetter(val('city'))) errors.city = 'Please enter your city.';
+
+    validateResume(form, errors);
+    return errors;
+  }
+
   /* Same rules the server enforces — this only saves the user a round trip. */
   function validate(form) {
+    if (form.getAttribute('data-axi-programme') === 'qa') return validateQa(form);
+
     var errors = {};
     var val = function (n) {
       var el = form.querySelector('[name="' + n + '"]');
@@ -51,18 +91,7 @@
     if (val('college').length < 2) errors.college = 'Please enter your college or university.';
     if (!val('course')) errors.course = 'Please select your course.';
 
-    var file = form.querySelector('[name="resume"]');
-    if (!file || !file.files || !file.files.length) {
-      errors.resume = 'Please attach your resume (PDF or Word, up to 5 MB).';
-    } else {
-      var f = file.files[0];
-      var max = CFG.maxSize || 5242880;
-      if (f.size > max) {
-        errors.resume = 'That file is larger than ' + (CFG.maxSizeMB || 5) + ' MB. Please upload a smaller one.';
-      } else if (!/\.(pdf|doc|docx)$/i.test(f.name)) {
-        errors.resume = 'Only PDF, DOC and DOCX files are accepted.';
-      }
-    }
+    validateResume(form, errors);
 
     var consent = form.querySelector('[name="consent"]');
     if (consent && !consent.checked) errors.consent = 'Please accept the privacy terms to continue.';
@@ -114,6 +143,9 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      // A second click or Enter press while the first request is in flight
+      // must not create a second application.
+      if (form.getAttribute('data-axi-busy') === '1') return;
       clearErrors(form);
 
       var errors = validate(form);
@@ -129,11 +161,12 @@
       var label = form.querySelector('.axi-submit-label');
       var originalLabel = label ? label.textContent : '';
 
+      form.setAttribute('data-axi-busy', '1');
       if (button) { button.disabled = true; button.classList.add('is-busy'); }
       if (label) label.textContent = 'Saving';
 
       var data = new FormData(form);
-      data.append('action', 'axi_int_submit');
+      data.append('action', form.getAttribute('data-axi-action') || 'axi_int_submit');
       data.append('nonce', CFG.nonce || '');
 
       fetch(CFG.ajax, { method: 'POST', body: data, credentials: 'same-origin' })
@@ -164,6 +197,7 @@
           }
         })
         .then(function () {
+          form.removeAttribute('data-axi-busy');
           if (button) { button.disabled = false; button.classList.remove('is-busy'); }
           if (label) label.textContent = originalLabel;
         });

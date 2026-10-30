@@ -239,6 +239,8 @@ body.axi-portal{margin:0;background:var(--p-bg);color:var(--p-body);font-family:
   font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:20px;white-space:nowrap;}
 .axi-chip svg.ico{width:13px;height:13px;}
 .axi-chip-warn{background:#fdf4e2;color:#7a5405;}
+.axi-nowrap{white-space:nowrap;}
+.axi-resume-actions{margin:0 0 12px;}
 
 .axi-avatar{width:34px;height:34px;flex:none;border-radius:50%;background:var(--a,#3c59e7);color:#fff;
   font-size:12.5px;font-weight:700;display:grid;place-items:center;letter-spacing:.02em;}

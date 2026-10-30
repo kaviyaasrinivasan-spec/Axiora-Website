@@ -35,7 +35,9 @@ class Axiora_Internship_DB {
 		$sql_apps = "CREATE TABLE $apps (
 			id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 			ref_code varchar(24) NOT NULL DEFAULT '',
+			programme varchar(20) NOT NULL DEFAULT 'genai',
 			full_name varchar(150) NOT NULL DEFAULT '',
+			gender varchar(20) NOT NULL DEFAULT '',
 			email varchar(190) NOT NULL DEFAULT '',
 			phone varchar(40) NOT NULL DEFAULT '',
 			college varchar(190) NOT NULL DEFAULT '',
@@ -58,7 +60,8 @@ class Axiora_Internship_DB {
 			PRIMARY KEY  (id),
 			KEY status (status),
 			KEY created_at (created_at),
-			KEY email (email)
+			KEY email (email),
+			KEY programme (programme)
 		) $charset;";
 
 		$sql_log = "CREATE TABLE $log (
@@ -93,7 +96,9 @@ class Axiora_Internship_DB {
 
 		$row = array(
 			'ref_code'    => '',
+			'programme'   => 'genai',
 			'full_name'   => '',
+			'gender'      => '',
 			'email'       => '',
 			'phone'       => '',
 			'college'     => '',
@@ -123,8 +128,8 @@ class Axiora_Internship_DB {
 
 		$id = (int) $wpdb->insert_id;
 
-		// Human-friendly reference, e.g. AXI-2026-0042.
-		$ref = sprintf( 'AXI-%s-%04d', current_time( 'Y' ), $id );
+		// Human-friendly reference, e.g. AXI-2026-0042 (GenAI) or AXJ-2026-0043 (job application).
+		$ref = sprintf( '%s-%s-%04d', axi_int_programme_prefix( $row['programme'] ), current_time( 'Y' ), $id );
 		$wpdb->update( self::table(), array( 'ref_code' => $ref ), array( 'id' => $id ) );
 
 		self::log(
@@ -242,7 +247,7 @@ class Axiora_Internship_DB {
 	/**
 	 * Filtered, sorted, paginated list.
 	 *
-	 * @param array $args search|status|course|from|to|orderby|order|per_page|page
+	 * @param array $args search|status|programme|course|from|to|orderby|order|per_page|page
 	 * @return array{rows:array,total:int,pages:int,page:int}
 	 */
 	public static function query( $args = array() ) {
@@ -251,9 +256,10 @@ class Axiora_Internship_DB {
 		$args = wp_parse_args(
 			$args,
 			array(
-				'search'   => '',
-				'status'   => '',
-				'course'   => '',
+				'search'    => '',
+				'status'    => '',
+				'programme' => '',
+				'course'    => '',
 				'from'     => '',
 				'to'       => '',
 				'orderby'  => 'created_at',
@@ -279,6 +285,10 @@ class Axiora_Internship_DB {
 		if ( '' !== $args['status'] && axi_int_status_exists( $args['status'] ) ) {
 			$where[]  = 'status = %s';
 			$params[] = $args['status'];
+		}
+		if ( '' !== $args['programme'] && axi_int_programme_exists( $args['programme'] ) ) {
+			$where[]  = 'programme = %s';
+			$params[] = $args['programme'];
 		}
 		if ( '' !== $args['course'] ) {
 			$where[]  = 'course = %s';
@@ -376,6 +386,19 @@ class Axiora_Internship_DB {
 		return $counts;
 	}
 
+	/** @return array<string,int> programme key => count, every programme present. */
+	public static function counts_by_programme() {
+		global $wpdb;
+
+		$counts = array_fill_keys( array_keys( axi_int_programmes() ), 0 );
+		$rows   = $wpdb->get_results( 'SELECT programme, COUNT(*) AS c FROM ' . self::table() . ' GROUP BY programme' );
+
+		foreach ( (array) $rows as $row ) {
+			$counts[ $row->programme ] = (int) $row->c;
+		}
+		return $counts;
+	}
+
 	public static function total() {
 		global $wpdb;
 		return (int) $wpdb->get_var( 'SELECT COUNT(*) FROM ' . self::table() );
@@ -445,6 +468,9 @@ class Axiora_Internship_DB {
 	/** How many applications this email already has — used to flag duplicates. */
 	public static function count_by_email( $email ) {
 		global $wpdb;
+		if ( '' === (string) $email ) {
+			return 0; // QA applications carry no email — never group them together.
+		}
 		return (int) $wpdb->get_var(
 			$wpdb->prepare( 'SELECT COUNT(*) FROM ' . self::table() . ' WHERE email = %s', $email )
 		);

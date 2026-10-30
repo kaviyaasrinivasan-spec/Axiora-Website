@@ -15,6 +15,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 
 delete_option( 'axi_int_version' );
 delete_option( 'axi_int_page_id' );
+delete_option( 'axi_int_qa_page_id' );
 delete_option( 'axi_int_notify_email' );
 delete_option( 'axi_int_send_confirmation' );
 

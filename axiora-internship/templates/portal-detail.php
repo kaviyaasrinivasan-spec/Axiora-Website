@@ -37,6 +37,10 @@ $axi_actions  = '<a class="axi-btn axi-btn-ghost" href="' . esc_url( axi_int_por
 	. '<svg class="ico" aria-hidden="true"><use href="#p-left"/></svg> Back to list</a>';
 
 if ( $app->resume_file ) {
+	if ( Axiora_Internship_Portal::resume_viewable( $app ) ) {
+		$axi_actions .= '<a class="axi-btn axi-btn-ghost" href="' . esc_url( Axiora_Internship_Portal::resume_url( $app, 'view' ) ) . '" target="_blank" rel="noopener">'
+			. '<svg class="ico" aria-hidden="true"><use href="#p-file"/></svg> View resume</a>';
+	}
 	$axi_actions .= '<a class="axi-btn axi-btn-primary" href="' . esc_url( Axiora_Internship_Portal::resume_url( $app ) ) . '">'
 		. '<svg class="ico" aria-hidden="true"><use href="#p-download"/></svg> Download resume</a>';
 }
@@ -53,6 +57,7 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 		<div class="axi-profile-tags">
 			<?php axi_int_status_badge( $app->status ); ?>
 			<span class="axi-chip"><?php echo esc_html( $app->ref_code ); ?></span>
+			<span class="axi-chip"><?php echo esc_html( axi_int_programme_label( $app->programme ) ); ?></span>
 			<?php if ( $app->track ) : ?>
 				<span class="axi-chip"><?php echo esc_html( $app->track ); ?></span>
 			<?php endif; ?>
@@ -64,9 +69,11 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 			<?php endif; ?>
 		</div>
 		<div class="axi-profile-contact">
-			<a href="mailto:<?php echo esc_attr( $app->email ); ?>">
-				<svg class="ico" aria-hidden="true"><use href="#p-mail"/></svg><?php echo esc_html( $app->email ); ?>
-			</a>
+			<?php if ( $app->email ) : ?>
+				<a href="mailto:<?php echo esc_attr( $app->email ); ?>">
+					<svg class="ico" aria-hidden="true"><use href="#p-mail"/></svg><?php echo esc_html( $app->email ); ?>
+				</a>
+			<?php endif; ?>
 			<?php if ( $app->phone ) : ?>
 				<a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $app->phone ) ); ?>">
 					<svg class="ico" aria-hidden="true"><use href="#p-phone"/></svg><?php echo esc_html( $app->phone ); ?>
@@ -87,14 +94,21 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 			<header class="axi-card-head"><div><h2>Submitted details</h2></div></header>
 			<div class="axi-card-body">
 				<dl class="axi-dl">
+					<div><dt>Programme</dt><dd><?php echo esc_html( axi_int_programme_label( $app->programme ) ); ?></dd></div>
 					<div><dt>Full name</dt><dd><?php echo esc_html( $app->full_name ); ?></dd></div>
-					<div><dt>Email address</dt><dd><?php echo esc_html( $app->email ); ?></dd></div>
-					<div><dt>Phone number</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->phone ) ); ?></dd></div>
-					<div><dt>College / University</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->college ) ); ?></dd></div>
-					<div><dt>Course</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->course ) ); ?></dd></div>
-					<div><dt>Graduation year</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->grad_year ) ); ?></dd></div>
-					<div><dt>Preferred track</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->track ) ); ?></dd></div>
-					<div><dt>City</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->city ) ); ?></dd></div>
+					<?php if ( 'qa' === $app->programme ) : ?>
+						<div><dt>Phone number</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->phone ) ); ?></dd></div>
+						<div><dt>City</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->city ) ); ?></dd></div>
+						<div><dt>Gender</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->gender ) ); ?></dd></div>
+					<?php else : ?>
+						<div><dt>Email address</dt><dd><?php echo esc_html( $app->email ); ?></dd></div>
+						<div><dt>Phone number</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->phone ) ); ?></dd></div>
+						<div><dt>College / University</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->college ) ); ?></dd></div>
+						<div><dt>Course</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->course ) ); ?></dd></div>
+						<div><dt>Graduation year</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->grad_year ) ); ?></dd></div>
+						<div><dt>Preferred track</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->track ) ); ?></dd></div>
+						<div><dt>City</dt><dd><?php echo esc_html( axi_int_display_or_dash( $app->city ) ); ?></dd></div>
+					<?php endif; ?>
 					<div><dt>Submitted</dt><dd><?php echo esc_html( axi_int_date( $app->created_at ) ); ?></dd></div>
 					<div><dt>Last updated</dt><dd><?php echo esc_html( axi_int_date( $app->updated_at ) ); ?></dd></div>
 					<?php if ( $axi_reviewer ) : ?>
@@ -117,6 +131,13 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 			<header class="axi-card-head"><div><h2>Resume</h2></div></header>
 			<div class="axi-card-body">
 				<?php if ( $app->resume_file ) : ?>
+					<?php if ( Axiora_Internship_Portal::resume_viewable( $app ) ) : ?>
+						<p class="axi-resume-actions">
+							<a class="axi-btn axi-btn-ghost axi-btn-sm" href="<?php echo esc_url( Axiora_Internship_Portal::resume_url( $app, 'view' ) ); ?>" target="_blank" rel="noopener">
+								<svg class="ico" aria-hidden="true"><use href="#p-file"/></svg> Open in browser
+							</a>
+						</p>
+					<?php endif; ?>
 					<a class="axi-resume" href="<?php echo esc_url( Axiora_Internship_Portal::resume_url( $app ) ); ?>">
 						<span class="axi-resume-ico"><svg class="ico" aria-hidden="true"><use href="#p-file"/></svg></span>
 						<span class="axi-resume-meta">
@@ -211,10 +232,12 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 							placeholder="e.g. Strong Python background, scheduled a call for Friday."></textarea>
 					</div>
 
-					<label class="axi-check">
-						<input type="checkbox" name="notify_applicant" value="1">
-						<span>Email the applicant about this update<small>Sends the new status and your note above.</small></span>
-					</label>
+					<?php if ( is_email( $app->email ) ) : ?>
+						<label class="axi-check">
+							<input type="checkbox" name="notify_applicant" value="1">
+							<span>Email the applicant about this update<small>Sends the new status and your note above.</small></span>
+						</label>
+					<?php endif; ?>
 
 					<button type="submit" class="axi-btn axi-btn-primary axi-btn-block">Save status</button>
 				</form>

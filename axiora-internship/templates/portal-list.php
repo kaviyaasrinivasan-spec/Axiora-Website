@@ -10,11 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $axi_statuses = axi_int_statuses();
 $axi_courses  = Axiora_Internship_DB::distinct_courses();
-$axi_filtered = ( '' !== $args['search'] || '' !== $args['status'] || '' !== $args['course'] || '' !== $args['from'] || '' !== $args['to'] );
+$axi_filtered = ( '' !== $args['search'] || '' !== $args['status'] || '' !== $args['programme'] || '' !== $args['course'] || '' !== $args['from'] || '' !== $args['to'] );
 
-$axi_title = ( '' !== $args['status'] && isset( $axi_statuses[ $args['status'] ] ) )
-	? $axi_statuses[ $args['status'] ]['label']
-	: 'All Applications';
+if ( '' !== $args['status'] && isset( $axi_statuses[ $args['status'] ] ) ) {
+	$axi_title = $axi_statuses[ $args['status'] ]['label'];
+} elseif ( '' !== $args['programme'] && axi_int_programme_exists( $args['programme'] ) ) {
+	$axi_title = axi_int_programme_label( $args['programme'] );
+} else {
+	$axi_title = 'All Applications';
+}
 
 $axi_subtitle = sprintf(
 	/* translators: %s: formatted number of applications. */
@@ -36,11 +40,12 @@ function axi_int_sort_link( $column, $label, $args ) {
 		array(
 			'orderby' => $column,
 			'order'   => $next_order,
-			's'       => $args['search'],
-			'status'  => $args['status'],
-			'course'  => $args['course'],
-			'from'    => $args['from'],
-			'to'      => $args['to'],
+			's'         => $args['search'],
+			'status'    => $args['status'],
+			'programme' => $args['programme'],
+			'course'    => $args['course'],
+			'from'      => $args['from'],
+			'to'        => $args['to'],
 		),
 		axi_int_portal_url( 'applications' )
 	);
@@ -69,6 +74,17 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 			<option value="">All statuses</option>
 			<?php foreach ( $axi_statuses as $axi_key => $axi_meta ) : ?>
 				<option value="<?php echo esc_attr( $axi_key ); ?>" <?php selected( $args['status'], $axi_key ); ?>>
+					<?php echo esc_html( $axi_meta['label'] ); ?>
+				</option>
+			<?php endforeach; ?>
+		</select>
+	</div>
+
+	<div class="axi-filter">
+		<select name="programme" aria-label="Filter by programme">
+			<option value="">All programmes</option>
+			<?php foreach ( axi_int_programmes() as $axi_key => $axi_meta ) : ?>
+				<option value="<?php echo esc_attr( $axi_key ); ?>" <?php selected( $args['programme'], $axi_key ); ?>>
 					<?php echo esc_html( $axi_meta['label'] ); ?>
 				</option>
 			<?php endforeach; ?>
@@ -140,7 +156,9 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 						</th>
 						<th><?php axi_int_sort_link( 'full_name', 'Applicant', $args ); ?></th>
 						<th>Contact</th>
+						<th>City / Gender</th>
 						<th><?php axi_int_sort_link( 'college', 'College &amp; Course', $args ); ?></th>
+						<th>Resume</th>
 						<th><?php axi_int_sort_link( 'status', 'Status', $args ); ?></th>
 						<th><?php axi_int_sort_link( 'created_at', 'Submitted', $args ); ?></th>
 						<th class="axi-col-go"><span class="axi-sr">Open</span></th>
@@ -158,17 +176,36 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 									<span class="axi-avatar" style="--a:<?php echo esc_attr( axi_int_avatar_hue( $axi_row->full_name ) ); ?>"><?php echo esc_html( axi_int_initials( $axi_row->full_name ) ); ?></span>
 									<span class="axi-person-meta">
 										<strong><?php echo esc_html( $axi_row->full_name ); ?></strong>
-										<small><?php echo esc_html( $axi_row->ref_code ); ?></small>
+										<small><?php echo esc_html( $axi_row->ref_code ); ?> · <?php echo esc_html( axi_int_programme_label( $axi_row->programme, true ) ); ?></small>
 									</span>
 								</span>
 							</td>
 							<td>
-								<a class="axi-inline-link" href="mailto:<?php echo esc_attr( $axi_row->email ); ?>"><?php echo esc_html( $axi_row->email ); ?></a>
-								<small class="axi-muted axi-block"><?php echo esc_html( axi_int_display_or_dash( $axi_row->phone ) ); ?></small>
+								<?php if ( $axi_row->email ) : ?>
+									<a class="axi-inline-link" href="mailto:<?php echo esc_attr( $axi_row->email ); ?>"><?php echo esc_html( $axi_row->email ); ?></a>
+									<small class="axi-muted axi-block"><?php echo esc_html( axi_int_display_or_dash( $axi_row->phone ) ); ?></small>
+								<?php else : ?>
+									<a class="axi-inline-link" href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $axi_row->phone ) ); ?>"><?php echo esc_html( axi_int_display_or_dash( $axi_row->phone ) ); ?></a>
+								<?php endif; ?>
+							</td>
+							<td>
+								<?php echo esc_html( axi_int_display_or_dash( $axi_row->city ) ); ?>
+								<small class="axi-muted axi-block"><?php echo esc_html( axi_int_display_or_dash( $axi_row->gender ) ); ?></small>
 							</td>
 							<td>
 								<?php echo esc_html( axi_int_display_or_dash( $axi_row->college ) ); ?>
 								<small class="axi-muted axi-block"><?php echo esc_html( axi_int_display_or_dash( $axi_row->course ) ); ?></small>
+							</td>
+							<td class="axi-nowrap">
+								<?php if ( $axi_row->resume_file ) : ?>
+									<?php if ( Axiora_Internship_Portal::resume_viewable( $axi_row ) ) : ?>
+										<a class="axi-inline-link" href="<?php echo esc_url( Axiora_Internship_Portal::resume_url( $axi_row, 'view' ) ); ?>" target="_blank" rel="noopener">View</a>
+										<span class="axi-muted">·</span>
+									<?php endif; ?>
+									<a class="axi-inline-link" href="<?php echo esc_url( Axiora_Internship_Portal::resume_url( $axi_row ) ); ?>">Download</a>
+								<?php else : ?>
+									<span class="axi-muted">—</span>
+								<?php endif; ?>
 							</td>
 							<td><?php axi_int_status_badge( $axi_row->status ); ?></td>
 							<td class="axi-muted" title="<?php echo esc_attr( axi_int_date( $axi_row->created_at ) ); ?>">
@@ -193,13 +230,14 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 		$axi_base = add_query_arg(
 			array_filter(
 				array(
-					's'       => $args['search'],
-					'status'  => $args['status'],
-					'course'  => $args['course'],
-					'from'    => $args['from'],
-					'to'      => $args['to'],
-					'orderby' => $args['orderby'],
-					'order'   => $args['order'],
+					's'         => $args['search'],
+					'status'    => $args['status'],
+					'programme' => $args['programme'],
+					'course'    => $args['course'],
+					'from'      => $args['from'],
+					'to'        => $args['to'],
+					'orderby'   => $args['orderby'],
+					'order'     => $args['order'],
 				),
 				static function ( $value ) {
 					return '' !== (string) $value;

@@ -20,6 +20,8 @@ $axi_user         = wp_get_current_user();
 $axi_side_counts  = Axiora_Internship_DB::counts_by_status();
 $axi_side_total   = array_sum( $axi_side_counts );
 $axi_current_stat = isset( $_GET['status'] ) ? sanitize_key( wp_unslash( $_GET['status'] ) ) : '';
+$axi_prog_counts  = Axiora_Internship_DB::counts_by_programme();
+$axi_current_prog = isset( $_GET['programme'] ) ? sanitize_key( wp_unslash( $_GET['programme'] ) ) : '';
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -52,11 +54,20 @@ $axi_current_stat = isset( $_GET['status'] ) ? sanitize_key( wp_unslash( $_GET['
 				href="<?php echo esc_url( axi_int_portal_url() ); ?>">
 				<svg class="ico" aria-hidden="true"><use href="#p-grid"/></svg> Dashboard
 			</a>
-			<a class="axi-nav-item<?php echo ( 'applications' === $axi_nav && '' === $axi_current_stat ) ? ' is-current' : ''; ?>"
+			<a class="axi-nav-item<?php echo ( 'applications' === $axi_nav && '' === $axi_current_stat && '' === $axi_current_prog ) ? ' is-current' : ''; ?>"
 				href="<?php echo esc_url( axi_int_portal_url( 'applications' ) ); ?>">
 				<svg class="ico" aria-hidden="true"><use href="#p-inbox"/></svg> All Applications
 				<span class="axi-nav-count"><?php echo esc_html( number_format_i18n( $axi_side_total ) ); ?></span>
 			</a>
+
+			<span class="axi-nav-label">Programmes</span>
+			<?php foreach ( axi_int_programmes() as $axi_key => $axi_meta ) : ?>
+				<a class="axi-nav-item<?php echo ( 'applications' === $axi_nav && '' === $axi_current_stat && $axi_current_prog === $axi_key ) ? ' is-current' : ''; ?>"
+					href="<?php echo esc_url( axi_int_portal_url( 'applications', array( 'programme' => $axi_key ) ) ); ?>">
+					<svg class="ico" aria-hidden="true"><use href="#p-file"/></svg> <?php echo esc_html( $axi_meta['label'] ); ?>
+					<span class="axi-nav-count"><?php echo esc_html( number_format_i18n( $axi_prog_counts[ $axi_key ] ) ); ?></span>
+				</a>
+			<?php endforeach; ?>
 
 			<span class="axi-nav-label">Pipeline</span>
 			<?php foreach ( axi_int_statuses() as $axi_key => $axi_meta ) : ?>
@@ -70,7 +81,10 @@ $axi_current_stat = isset( $_GET['status'] ) ? sanitize_key( wp_unslash( $_GET['
 
 			<span class="axi-nav-label">Site</span>
 			<a class="axi-nav-item" href="<?php echo esc_url( axi_int_application_url() ); ?>" target="_blank" rel="noopener">
-				<svg class="ico" aria-hidden="true"><use href="#p-file"/></svg> View Public Form
+				<svg class="ico" aria-hidden="true"><use href="#p-file"/></svg> GenAI Public Form
+			</a>
+			<a class="axi-nav-item" href="<?php echo esc_url( axi_int_qa_application_url() ); ?>" target="_blank" rel="noopener">
+				<svg class="ico" aria-hidden="true"><use href="#p-file"/></svg> Job Application Form
 			</a>
 			<?php if ( current_user_can( 'manage_options' ) ) : ?>
 				<a class="axi-nav-item" href="<?php echo esc_url( admin_url() ); ?>">

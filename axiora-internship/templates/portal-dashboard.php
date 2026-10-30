@@ -133,6 +133,7 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 					<thead>
 						<tr>
 							<th>Applicant</th>
+							<th>Programme</th>
 							<th>College</th>
 							<th>Course</th>
 							<th>Status</th>
@@ -148,10 +149,11 @@ include AXI_INT_DIR . 'templates/portal-header.php';
 										<span class="axi-avatar" style="--a:<?php echo esc_attr( axi_int_avatar_hue( $axi_row->full_name ) ); ?>"><?php echo esc_html( axi_int_initials( $axi_row->full_name ) ); ?></span>
 										<span class="axi-person-meta">
 											<strong><?php echo esc_html( $axi_row->full_name ); ?></strong>
-											<small><?php echo esc_html( $axi_row->email ); ?></small>
+											<small><?php echo esc_html( $axi_row->email ? $axi_row->email : $axi_row->phone ); ?></small>
 										</span>
 									</span>
 								</td>
+								<td><span class="axi-chip"><?php echo esc_html( axi_int_programme_label( $axi_row->programme, true ) ); ?></span></td>
 								<td><?php echo esc_html( axi_int_display_or_dash( $axi_row->college ) ); ?></td>
 								<td class="axi-muted"><?php echo esc_html( axi_int_display_or_dash( $axi_row->course ) ); ?></td>
 								<td><?php axi_int_status_badge( $axi_row->status ); ?></td>

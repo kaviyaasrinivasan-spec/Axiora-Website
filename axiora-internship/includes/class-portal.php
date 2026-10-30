@@ -95,6 +95,9 @@ class Axiora_Internship_Portal {
 			case 'application':
 				self::render_detail();
 				break;
+			case 'resume':
+				self::serve_resume();
+				break;
 			case 'applications':
 				self::render_list();
 				break;
@@ -315,15 +318,16 @@ class Axiora_Internship_Portal {
 	/** Read list filters off the query string. */
 	public static function list_args_from_request() {
 		return array(
-			'search'   => isset( $_GET['s'] ) ? sanitize_text_field( wp_unslash( $_GET['s'] ) ) : '',
-			'status'   => isset( $_GET['status'] ) ? sanitize_key( wp_unslash( $_GET['status'] ) ) : '',
-			'course'   => isset( $_GET['course'] ) ? sanitize_text_field( wp_unslash( $_GET['course'] ) ) : '',
-			'from'     => isset( $_GET['from'] ) ? sanitize_text_field( wp_unslash( $_GET['from'] ) ) : '',
-			'to'       => isset( $_GET['to'] ) ? sanitize_text_field( wp_unslash( $_GET['to'] ) ) : '',
-			'orderby'  => isset( $_GET['orderby'] ) ? sanitize_key( wp_unslash( $_GET['orderby'] ) ) : 'created_at',
-			'order'    => isset( $_GET['order'] ) ? sanitize_key( wp_unslash( $_GET['order'] ) ) : 'desc',
-			'per_page' => 20,
-			'page'     => isset( $_GET['paged'] ) ? max( 1, (int) $_GET['paged'] ) : 1,
+			'search'    => isset( $_GET['s'] ) ? sanitize_text_field( wp_unslash( $_GET['s'] ) ) : '',
+			'status'    => isset( $_GET['status'] ) ? sanitize_key( wp_unslash( $_GET['status'] ) ) : '',
+			'programme' => isset( $_GET['programme'] ) ? sanitize_key( wp_unslash( $_GET['programme'] ) ) : '',
+			'course'    => isset( $_GET['course'] ) ? sanitize_text_field( wp_unslash( $_GET['course'] ) ) : '',
+			'from'      => isset( $_GET['from'] ) ? sanitize_text_field( wp_unslash( $_GET['from'] ) ) : '',
+			'to'        => isset( $_GET['to'] ) ? sanitize_text_field( wp_unslash( $_GET['to'] ) ) : '',
+			'orderby'   => isset( $_GET['orderby'] ) ? sanitize_key( wp_unslash( $_GET['orderby'] ) ) : 'created_at',
+			'order'     => isset( $_GET['order'] ) ? sanitize_key( wp_unslash( $_GET['order'] ) ) : 'desc',
+			'per_page'  => 20,
+			'page'      => isset( $_GET['paged'] ) ? max( 1, (int) $_GET['paged'] ) : 1,
 		);
 	}
 
@@ -331,7 +335,27 @@ class Axiora_Internship_Portal {
 	 * Resume download & CSV export
 	 * ------------------------------------------------------------------ */
 
+	/** Legacy admin-post.php entry point — kept so old links keep working. */
 	public static function download_resume() {
+		self::stream_resume( 'download' );
+	}
+
+	/**
+	 * /internship-admin/resume/?id=…&mode=view|download — the portal route the
+	 * templates link to. Served from the portal rather than admin-post.php,
+	 * because for signed-in users admin-post.php runs every plugin's admin_init
+	 * and Hostinger's onboarding hooks can redirect before the file is sent.
+	 */
+	protected static function serve_resume() {
+		$mode = ( isset( $_GET['mode'] ) && 'view' === $_GET['mode'] ) ? 'view' : 'download';
+		self::stream_resume( $mode );
+	}
+
+	/**
+	 * @param string $mode 'view' opens PDFs in the browser; Word files and
+	 *                     'download' are always sent as attachments.
+	 */
+	protected static function stream_resume( $mode ) {
 		if ( ! self::can_manage() ) {
 			wp_die( esc_html__( 'You are not allowed to view this file.', 'axiora-internship' ), 403 );
 		}
@@ -361,9 +385,16 @@ class Axiora_Internship_Portal {
 		$type = wp_check_filetype( $real_path );
 		$mime = $type['type'] ? $type['type'] : 'application/octet-stream';
 
+		$inline = ( 'view' === $mode && 'application/pdf' === $mime );
+
+		// Drop anything a plugin may have buffered, so the file is sent intact.
+		while ( ob_get_level() ) {
+			ob_end_clean();
+		}
+
 		nocache_headers();
 		header( 'Content-Type: ' . $mime );
-		header( 'Content-Disposition: attachment; filename="' . $download_name . '"' );
+		header( 'Content-Disposition: ' . ( $inline ? 'inline' : 'attachment' ) . '; filename="' . $download_name . '"' );
 		header( 'Content-Length: ' . filesize( $real_path ) );
 		header( 'X-Content-Type-Options: nosniff' );
 
@@ -394,7 +425,7 @@ class Axiora_Internship_Portal {
 		fputcsv(
 			$out,
 			array(
-				'Reference', 'Submitted', 'Status', 'Full name', 'Email', 'Phone',
+				'Reference', 'Programme', 'Submitted', 'Status', 'Full name', 'Gender', 'Email', 'Phone',
 				'College / University', 'Course', 'Graduation year', 'Preferred track',
 				'City', 'Message', 'Resume file', 'Last updated', 'Internal notes',
 			)
@@ -405,9 +436,11 @@ class Axiora_Internship_Portal {
 				$out,
 				array(
 					$row->ref_code,
+					axi_int_programme_label( $row->programme ),
 					$row->created_at,
 					axi_int_status_label( $row->status ),
 					$row->full_name,
+					$row->gender,
 					$row->email,
 					// Leading apostrophe keeps "+91…" from being eaten as a formula.
 					"'" . $row->phone,
@@ -432,11 +465,26 @@ class Axiora_Internship_Portal {
 	 * Small helpers for the templates
 	 * ------------------------------------------------------------------ */
 
-	public static function resume_url( $app ) {
+	/**
+	 * @param object $app
+	 * @param string $mode 'download' or 'view'.
+	 */
+	public static function resume_url( $app, $mode = 'download' ) {
 		return wp_nonce_url(
-			admin_url( 'admin-post.php?action=axi_int_resume&id=' . (int) $app->id ),
+			axi_int_portal_url(
+				'resume',
+				array(
+					'id'   => (int) $app->id,
+					'mode' => ( 'view' === $mode ) ? 'view' : 'download',
+				)
+			),
 			'axi_int_resume_' . (int) $app->id
 		);
+	}
+
+	/** PDFs can be opened in the browser; Word files can only be downloaded. */
+	public static function resume_viewable( $app ) {
+		return $app && $app->resume_file && 'pdf' === strtolower( pathinfo( $app->resume_file, PATHINFO_EXTENSION ) );
 	}
 
 	/**
@@ -449,13 +497,14 @@ class Axiora_Internship_Portal {
 		$query = array( 'action' => 'axi_int_export' );
 
 		$map = array(
-			'search'  => 's',
-			'status'  => 'status',
-			'course'  => 'course',
-			'from'    => 'from',
-			'to'      => 'to',
-			'orderby' => 'orderby',
-			'order'   => 'order',
+			'search'    => 's',
+			'status'    => 'status',
+			'programme' => 'programme',
+			'course'    => 'course',
+			'from'      => 'from',
+			'to'        => 'to',
+			'orderby'   => 'orderby',
+			'order'     => 'order',
 		);
 
 		foreach ( $map as $arg_key => $query_key ) {

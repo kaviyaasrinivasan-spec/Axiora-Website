@@ -111,6 +111,42 @@ function axi_int_tracks() {
 	);
 }
 
+/**
+ * Internship programmes sharing this table and portal. `genai` is the original
+ * /genai-internship form; every row created before 1.1.0 belongs to it.
+ *
+ * @return array<string,array{label:string,short:string,prefix:string}>
+ */
+function axi_int_programmes() {
+	return array(
+		'genai' => array( 'label' => 'GenAI Internship',       'short' => 'GenAI', 'prefix' => 'AXI' ),
+		// Key stays 'qa' (stored in the DB); the form is now a general job application.
+		'qa'    => array( 'label' => 'Job Application',        'short' => 'Job',   'prefix' => 'AXJ' ),
+	);
+}
+
+function axi_int_programme_exists( $key ) {
+	return array_key_exists( $key, axi_int_programmes() );
+}
+
+function axi_int_programme_label( $key, $short = false ) {
+	$all = axi_int_programmes();
+	if ( ! isset( $all[ $key ] ) ) {
+		return ucfirst( (string) $key );
+	}
+	return $short ? $all[ $key ]['short'] : $all[ $key ]['label'];
+}
+
+function axi_int_programme_prefix( $key ) {
+	$all = axi_int_programmes();
+	return isset( $all[ $key ] ) ? $all[ $key ]['prefix'] : 'AXI';
+}
+
+/** Gender options on the QA form. */
+function axi_int_genders() {
+	return array( 'Male', 'Female' );
+}
+
 /** Graduation years offered, current year onwards. */
 function axi_int_grad_years() {
 	$now   = (int) current_time( 'Y' );
@@ -152,6 +188,14 @@ function axi_int_application_url() {
 		return get_permalink( $page_id );
 	}
 	return home_url( '/' . AXI_INT_PAGE_SLUG . '/' );
+}
+
+function axi_int_qa_application_url() {
+	$page_id = (int) get_option( 'axi_int_qa_page_id' );
+	if ( $page_id && 'publish' === get_post_status( $page_id ) ) {
+		return get_permalink( $page_id );
+	}
+	return home_url( '/' . AXI_INT_QA_PAGE_SLUG . '/' );
 }
 
 /* -------------------------------------------------------------------------
