@@ -1,0 +1,24 @@
+# Axiora Change & Defect Tracker (served at /qa/). Independent of the WordPress rules
+# in the parent folder: every request under /qa/ stays here.
+DirectoryIndex index.php
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /qa/
+# Static assets that exist are served directly; everything else goes to the app.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+# Always revalidate CSS/JS so a new deployment is picked up immediately.
+<IfModule mod_headers.c>
+<FilesMatch "\.(js|css|svg)$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+</IfModule>
+
+# Allow up to 50 attachments per save (PHP default is 20). Applies to /qa/ only.
+<IfModule LiteSpeed>
+php_value max_file_uploads 50
+</IfModule>
